@@ -1,0 +1,56 @@
+%%% 2023年12月27日 星期三 10时43分28秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\hbox{}\vfill %it is invalid to use \noindent
+\tocdata{toc}{叶佳修}
+\addsection{乡间小路}{歌曲}
+%\seclangtit{The Two Grenadiers}
+\composer{叶佳修}
+\begin{lilypond}
+\include "conf.ly"
+\score {
+\relative {%
+	\tempo "Moderato Cantabile"
+	\key c \major
+	\time 2/4
+	\repeat volta 2 {
+		e''4 r8 e e4 a,8 a c4 a8 g a2
+		a4\upbow a8 a a4 a8( c) d4 d8 e d2
+		e8 e e g f4 f e\downbow \times 2/3 {e8( d c)} d2
+		b4 b8 a g4 g8( a) b8 b \times 2/3 {b( a g)} a2}
+	a'4.\downbow e8 a a16( b) a8 g g8.( a16)
+	g8 d g a g f f4 f8( e) d4 c8( d) e d c d e2
+	a4.\downbow e8 a a16( b) a8 g g4 g8( d)
+	g g16 a g8 f f4 f8( g) a g f e d4 d g2 \fine
+}
+\layout { }
+% \midi { }
+}
+\end{lilypond}
+
+\vfill
+\tocdata{toc}{顾嘉辉}
+\addsection{铁血丹心}{歌曲}
+%\seclangtit{The Two Grenadiers}
+%\composer{{\youyuan 广东乐曲}}
+\composer{顾嘉辉}
+\begin{lilypond}
+\include "conf.ly"
+\score {
+\relative {%
+	\tempo "Moderato Cantabile"
+	\key e \minor
+	\time 2/4
+	\partial 4 b'8\upbow( a) g4 g8( fis) e4. b8 e2 ~e4 e8( d)
+	b4 d8( a) b2 ~b4 b'8\upbow( a) g4 g8( fis)
+	e4. b8 e2 ~e4 a8( g) e4  g8( a) b2 ~b4 b8( d)
+	e4. d8 e4 d8( b) d4 a ~a2 g4. e8 a b d c
+	b2 ~b4 b8( d) e4 e8( d) e4 d8( b)
+	d4 a ~a2 g4. e8 a( b) d,( fis) e2 ~e2 \fine
+}
+\layout { }
+% \midi { }
+}
+\end{lilypond}
+
+\vfill\break

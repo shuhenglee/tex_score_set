@@ -1,0 +1,46 @@
+%%% 2024年 1月 2日 星期二 08时46分32秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\hbox{}\vfill %it is invalid to use \noindent
+%\tocdata{toc}{}
+\addsection{花儿与少年}{民歌}
+\composer{{\youyuan 青海民歌}}
+%\composer{R.~Schumann}
+\begin{lilypond}
+\include "conf.ly"
+\score {
+\relative {%
+	\tempo "Moderato cantabile"
+	\key a \minor
+	\time 2/4
+	\repeat segno 2 {\repeat volta 2 {e''8\downbow a e16 g e d e d c b a4
+		\repeat unfold 2 {a'8\upbow a16 b a g e g a2}
+		a8 a d a16 g a8 a g e a a16 b a g e8
+		d8. e16 g16 a g e d8 e16 g e d c b a2
+		\repeat unfold 2 {a'8 a16 b a g e8 d4 d}
+		a'8[ a16 b] a g e8 d8. e16 g a g e
+		d8 e16 g e d c b \bar "|"}}
+	\alternative {
+		\volta 1 {
+			\alternative {
+				\volta 1 {a2 \bar ":|."}
+				\volta 2 {\time 3/4 \tempo "Allegro cantabile" a2. ~a}}
+			\repeat volta 2 {
+			a,2^\markup{\italic{\teeny{2da volta 8va.}}}\downbow( c4) a2( c4)
+			d4( c d) e4.( d8 e[ g]) a2. ~a
+			a4.( c8 a[ g]) e2( g4) a( e g)
+			d( c d) e2. ~e a4( e g)
+			d( c d) e2( d8 c) d2( a4)
+			a( c d) e4.( g8 d[ c]) d2( e4)
+			a,4( c d8 e) d2( c4)}
+			\alternative {
+				\volta 1 {a2. ~a}
+				\volta 2 {\time 2/4 {a'2 ~a\section}}}}
+		\volta 2 {a4 a'8 r \fine}}
+}
+\layout { }
+% \midi { }
+}
+\end{lilypond}
+
+\vfill\break

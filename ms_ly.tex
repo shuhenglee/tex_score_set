@@ -1,0 +1,38 @@
+%%% 2023年 2月14日 星期二 11时18分26秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\hbox{}\vskip0pt plus 1fil
+
+\addsection{五月之歌}{民歌}
+\seclangtit{May Song}
+
+~\hfill{\youyuan 民歌}
+
+\begin{lilypond}
+\layout {
+	indent = #0
+	line-width = #164
+ 	\context {%
+ 		\Score
+ 		\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 16)
+ 	}
+}
+\score{
+\relative {%
+	\set Score.barNumberVisibility = #all-bar-numbers-visible
+	%\override Score.BarNumber.break-visibility = #all-visible
+	\override Score.BarNumber.break-visibility = #end-of-line-invisible
+	\tempo "Allegro Moderato"
+	\key a \major
+	\time 4/4
+	\repeat volta 2 {a'4.\downbow cis8\upbow e4 a fis a8 fis e2
+	d4. e8 cis4 a b2 a e'4 e d d
+	cis\mf e8 cis\> b2 e4\p e d d cis e8 cis b2
+	a4.\f cis8 e4 a fis a8 fis e2
+	d4. e8 cis4 a b2_\markup{\italic{\teeny{2da volta poco rit.}}} a}
+}%
+\layout { }
+%\midi { }
+}
+\end{lilypond}
+\vskip0pt plus 1fil

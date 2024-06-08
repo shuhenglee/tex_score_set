@@ -1,0 +1,44 @@
+%%% 2023年 2月14日 星期二 11时54分51秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\tocdata{toc}{亨德尔}
+\addsection{合唱 --- 选自清唱剧《犹大$\cdot$马加比》}{古典}
+\seclangtit{Chorus from ``Judas Maccabaeus''}
+
+\composer{{\youyuan 亨德尔}}
+\composer{G.~F.~Handel}
+
+\begin{lilypond}
+\layout {
+	indent = #0
+	line-width = #164
+ 	\context {%
+ 		\Score
+ 		\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 16)
+ 	}
+}
+%rall = \markup{\italic{\teeny{rall.}}}
+%drall = #(make-dynamic-script rall)
+\score {
+\relative {%
+	\set Score.barNumberVisibility = #all-bar-numbers-visible
+	%\override Score.BarNumber.break-visibility = #all-visible
+	\override Score.BarNumber.break-visibility = #end-of-line-invisible
+	\tempo "Maestoso"
+	\key g \major
+	\time 4/4
+	d''2\downbow\f b4.( c8) d2 g, a8( b c d) c4--( b--) a2. r4
+	b8\downbow\<( c d e) d4--( d--)\! g2\> d\!
+	c4 b a4.( g8) g2. r4 b8\mf\downbow( a b c) b4--( b--)
+	a2 g c4 b a g fis2. r4
+	e'8\downbow( dis e fis) e4--( fis--) g2 e
+	fis4 e8 d! cis4.( d8) d2. r4
+	d2\downbow\f b4.( c8) d2 g, a8( b c d) c4--( b--)
+	a2. r4 b8\downbow\<( c d e) d4--( d--)\! g2\> d
+	c4-\markup{\italic{\teeny{rall.}}}\! b a4.( g8--) g2. r4\fermata \bar "|."
+}%
+\layout { }
+%\midi { }
+}
+\end{lilypond}
+\vskip0pt plus 1fil\break

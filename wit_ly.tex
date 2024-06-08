@@ -1,0 +1,47 @@
+%%% 2023年 3月11日 星期六 10时49分59秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\hbox{}\vfil
+\tocdata{toc}{Paganini}
+\addsection{女巫之舞(主题)}{古典}
+\seclangtit{Theme from ``Witches' Dance''}
+\composer{{\youyuan 帕格尼尼}}
+\composer{N.~Paganini}
+\begin{lilypond}
+	\include "conf.ly"
+\score {
+\relative {
+	\key d \major
+	\time 2/4
+	\tempo "Andante"
+	fis''8.\downbow\mf( e16-.) d8.\upbow( cis16-.)
+	d8 r a4->--\upbow
+	g'8.( fis16-.) e8.( dis16-.) e8 r a,4->--\break
+	fis'8.( e16-.) d!8.( cis16-.) b8 r e4
+	\tuplet 3/2 {a,8 cis e} \tuplet 3/2 {a8\upbow e cis} a4 r\break
+	fis'8.\downbow\f( e16-.) d8.( cis16-.) d8 r a4->--\upbow
+	g'8.( fis16-.) e8.( dis16-.) e8 r a,4->--\break
+	fis'8.\downbow( e16-.) d!8.( cis16-.) b8 r cis4
+	\tuplet 3/2 {d8 fis, a} \tuplet 3/2 {d8 a fis} d4 r\break
+	\tuplet 3/2 {a''8\downbow\f e cis} \tuplet 3/2 {a8 cis e} a4 r
+	\tuplet 3/2 {d,8\downbow a fis} \tuplet 3/2 {d fis a} d4 r
+	\tuplet 3/2 {b'8\downbow gis e} \tuplet 3/2 {b8 e gis}
+	b4 gis \tuplet 3/2 {a8 e cis} \tuplet 3/2 {a cis e} a4 r\break
+	a8._\markup{\small{\dynamic p \italic{meno mosso}}}\downbow( g!16-.)
+	f8.( e16-.) f4 c-- bes'8.( a16-.) g8.( fis!16-.) g4 a\break
+	f8.( e16-.) d8._\markup{\small{\italic{rit.}}}( cis!16-.)
+	d4 e a,2\fermata\p \breathe
+	fis'!8.\downbow_\markup{\small{\dynamic f \italic{a tempo}}}( e16-.)
+	d8.( cis16-.) d8 r a4->--
+	g'8.\downbow( fis16-.) e8.( dis16-.) e8 r a,4->--
+	fis'8.\downbow( e16-.) d!8.( cis16-.)
+	b8.( e16-.) \tuplet 3/2 {g8\upbow a b}
+	\tuplet 3/2 {fis8\downbow\f a g} \tuplet 3/2 {fis8 e d}
+	\tuplet 3/2 {cis8 b a} \tuplet 3/2 {g8 fis e}
+	\tuplet 3/2 {d8 fis a} \tuplet 3/2 {d8 a fis} d4-. r\fine
+}
+\layout { }
+%\midi { }
+}
+\end{lilypond}
+\vfil\eject

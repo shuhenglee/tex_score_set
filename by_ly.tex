@@ -1,0 +1,95 @@
+%%% 2023年 2月 4日 星期六 13时11分21秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\hbox{}\vfil
+\tocdata{toc}{奥德威}
+\addsection{送别}{歌曲}
+\composer{{\youyuan 奥德威}}
+\begin{lilypond}
+\layout {
+	indent = #0
+	line-width = #164
+ 	\context {%
+ 		\Score
+ 		\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 16)
+ 	}
+}
+\score{
+\relative {%
+	\set Score.barNumberVisibility = #all-bar-numbers-visible
+	%\override Score.BarNumber.break-visibility = #all-visible
+	\override Score.BarNumber.break-visibility = #end-of-line-invisible
+	\set breathMarkType = #'caesura
+	\tempo "Moderato"
+	\key c \major
+	\time 4/4
+	g''4 e8 ( g) c2 a4 ( c) g2
+	g4 c,8 ( d) e4 d8 ( c) d1
+	g4 e8 ( g) c4. ( b8) a4 ( c) g2
+	g4 d8 ( e) f4.( b,8) c1
+	a'4( c) c2 b4 a8( b) c2
+	a8( b) c( a) a( g) e ( c) d1
+	g4 e8( g) c4.( b8) a4( c) g2
+	g4 d8( e) f4.( b,8) c1 \bar "|."
+}%
+\layout { }
+%\midi { }
+}
+\end{lilypond}
+\tocdata{toc}{福斯特}
+\addsection{苏珊娜}{歌曲}
+\composer{{\youyuan 福斯特}}
+\begin{lilypond}
+\layout {
+	indent = #0
+	line-width = #164
+ 	\context {%
+ 		\Score
+ 		\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 16)
+ 	}
+}
+\score{
+\relative {%
+	\set Score.barNumberVisibility = #all-bar-numbers-visible
+	%\override Score.BarNumber.break-visibility = #all-visible
+	\override Score.BarNumber.break-visibility = #end-of-line-invisible
+	\set breathMarkType = #'caesura
+	\tempo "Allegreto"
+	\key c \major
+	\time 2/4
+	\partial 4 r8 c''16 d e8 g g8. a16
+	g8 e c8. d16 e8 e d c d4 r8 c16 d
+	e8 g g8. a16 g8 e c8. d16 e8 e d d c2
+	f4 f a8 a4 a8 g8. g16 e8 c d4 r8 c16 d
+	e8 g g8. a16 g8 e c8. d16 e8 e d d c4 r4 \bar "|."
+}%
+\layout { }
+%\midi { }
+}
+\end{lilypond}
+\vfil
+\tocdata{toc}{刘铁山~\&~茅沅}
+\addsection{瑶族舞曲}{歌曲}
+\composer{{\youyuan 刘铁山~\&~茅沅}}
+\begin{lilypond}
+\include "conf.ly"
+\score {
+\relative {%
+	\key c \major
+	\time 2/4
+	\tempo "Andante"
+	a'4 e8 e a4 e'8 e a,4 e8 e a4 e'8 e
+	c8. b16 c8. d16 e8. d16 e8. d16 d8. c16 c8. b16 a4 r4
+	a8_\markup{\small\italic{\dynamic mp dolce}}( e') e( a,) d4.( c8)
+	b( d) c( b) a8.( g16 e4)
+	a8.( b16) c8( d) e8.( g16) e8( d)
+	c8( d16 e) d8( c) a4. r8
+	g8\< g16( a) c8( a) c8 c16( d) e8( g)
+	e8 e16( g) d8 e16( g)\! e2\> a,8\!( e') a,( e')
+	a,( d) a( d) c( d16 e) d8( c) a4. r8 \bar "|."
+}%
+\layout { }
+%\midi { }
+}
+\end{lilypond}
+\vfil\eject

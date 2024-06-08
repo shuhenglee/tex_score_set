@@ -1,0 +1,45 @@
+%%% 2024年 1月 3日 星期三 09时46分39秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\hbox{}\vfill %it is invalid to use \noindent
+\tocdata{toc}{Tchaikovsky}
+\addsection{小天鹅舞曲}{古典}
+\seclangtit{Dance of the Little Swans}
+\composer{{\youyuan 柴可夫斯基}}
+%\composer{R.~Schumann}
+\begin{lilypond}
+\include "conf.ly"
+\score {
+\relative {%
+	\tempo "Allegro Moderato"
+	\key c \major
+	\time 4/4
+	r8 c''-.\upbow[ c-. c-.] c8.->[ b32( c)] d8-. c-.
+	b-.[ d-. d-. d-.] d8.->[ c32( d)] e8-.[ d-.]
+	c[ e] a[ gis] e2 ~e8[ e] a[ gis]
+	e2 ~e8[ c-. c-. c-.] c8.->[ b32( c)] d8-. c-.
+	b-. d-. d-. d-. d8.-> c32( d) e8-. d-.
+	c e a gis e2 ~e8 e a gis e2 ~e8
+	e-. e-. e-. e-. e-. a16( g) f-. e-.
+	d8 e4-> f-> cis d8 ~d
+	d-. d-. d-. d-. d-. g16( f e d c8) e-.
+	b'16( a g f e8) b'-. d,16( c b a g8)
+	e-. e-. e-. e-. e-. a16( g) f-. e-.
+	d8 e4-> f-> cis d8 ~d d-. d-. d-. d-. d-.
+	g16( f) e-. d-. c8-. g-. e'16( fis g gis) a8-. e-.
+	c16( cis d dis e8) e-. e-. e-. e-. e-.
+	a16( g) f-. e-. d8 e4-> f-> cis d8 ~d
+	d-. d-. d-. d-. d-. g16( f e d c8) g'-.
+	b16( a g f e8) b'-. d16( c b a g8)
+	e-. e-. e-. e-. e-. a16( g) f-. e-.
+	d8 e4-> f-> cis d8 ~d d-. d-. d-. d-. d-.
+	g16( f) e-. d-. c8-. g-.
+	b16( c d dis e8) e f16( fis g gis a8)
+	r4 gis'8\upbow a4-> r4 \fine
+}
+\layout { }
+% \midi { }
+}
+\end{lilypond}
+
+\vfill\break

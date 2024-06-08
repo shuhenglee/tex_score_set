@@ -1,0 +1,65 @@
+%%% 2023年 4月14日 星期五 10时01分52秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\leavevmode\vfil
+\tocdata{toc}{Rodgers}
+\addsection{雪绒花}{歌曲}
+\seclangtit{Edelweiss}
+\composer{{\youyuan 里查德$\cdot$罗杰斯}}
+\composer{Richard~Rodgers}
+\begin{lilypond}
+	\include "conf.ly"
+\score {
+\relative {
+	\key g \major
+	\time 3/4
+	\tempo "Moderato"
+	b'2\mp\downbow\<( d4) a'2.\! g2\>( d4) c2.\!
+	b2--\<( b4--) b( c d)\!
+	e2. d b2\mf( d4) a'2. g2( d4) c2.
+	b2\<( d4) d( e fis)\! g2. g
+	a2\downbow( d,4) fis( e d)
+	b2( d4) g2. e2( g4) a2( g4) fis2. d
+	b2\mf( d4) a'2. g2( d4) c2.
+	b2\<( d4) d( e fis)\! g2. g
+	a2\downbow( d,4) fis( e d)
+	b2( d4) g2. e2( g4) a2( g4) fis2. d
+	b2\p\<( d4) a'2.\! g2\>( d4) c2.\!
+	b2_\markup{\small\italic{rit.}}( d4)
+	d( e fis) g2. g\fermata\p\fine
+}
+\layout { }
+%\midi {\set Staff.midiInstrument = "violin" }}
+%\midi {}
+}
+\end{lilypond}
+\leavevmode\vfil
+\tocdata{toc}{Beethoven}
+\addsection{土拨鼠}{歌曲}
+\composer{{\youyuan 贝多芬}}
+\composer{L.~van~Beethoven}
+\begin{lilypond}
+	\include "conf.ly"
+\score {
+\relative {
+	\key a \minor
+	\time 6/8
+	\tempo "Moderato"
+	\partial 8 e'8\mp\upbow
+	a4 a8 a4 a8 b( c) b a4 a8
+	b4 b8 c( b) a b4.( e,4)\breathe
+	e8\upbow\p a4 a8 a4 a8
+	b( c) b a4 a8
+	b4 b8 e,4 e8 a4.--( a4--)
+	a16\upbow\p( b) c4\< c8 d4 d8 e4 e8\! d4 d8
+	c( b a) c( b a) b4.--\>( b4--)\! a16\upbow\f( b)
+	c4 c8 d4 d8 e4 e8 d4 d8 c_\markup{\small\italic{dim.}}( b a)
+	c( b a) a4.--\>( a4--)\! r8\fine
+}
+\layout { }
+% \midi {\set Staff.midiInstrument = "violin" 
+% }}
+%\midi {\tempo 4 = 72}
+}
+\end{lilypond}
+\vfil\eject

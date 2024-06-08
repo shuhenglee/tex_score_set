@@ -1,0 +1,53 @@
+%%% 2023年 3月 4日 星期六 14时05分26秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\hbox{}\vfil
+\tocdata{toc}{罗大佑}
+\addsection{恋曲1990}{歌曲}
+\composer{{\youyuan 罗大佑}}
+\begin{lilypond}
+\include "conf.ly"
+first = {
+	b'8 b b b gis( fis) fis gis ~gis4. e8
+	e fis gis cis,~ cis2~ cis
+	fis8 gis fis gis b4 gis8( fis) fis4. e8
+	e cis b4 gis'2~ gis
+	b8 b b b gis( fis) fis gis ~gis4. e8
+	e fis gis cis,~ cis2~ cis
+	fis8 gis fis gis b4 gis8( fis)
+	fis4. b,8 gis'8 fis gis( e) e2~ e2
+}
+second = {
+	b'4. gis8 b4 cis e4. cis8
+	e4 cis8( b) b4 b8( gis)
+	b4 cis8( b) \appoggiatura fis8 gis2 ~gis
+	fis8 gis fis gis b4 gis8( fis)
+	fis4. b,8 e4 gis8( fis16 gis ~gis4) fis~ fis2~ fis
+	gis4. gis8 fis4 gis b4. gis8 b4 cis
+	e4 e8 cis e4 fis8 e \appoggiatura b8 cis2 ~cis2
+	e8 e e e cis4 b8( gis) fis8 fis4 fis8 fis4 gis
+	\appoggiatura a8 b2 ~b4. b8 ~b b b b 
+	gis( fis) fis gis ~gis4. e8 e fis gis( cis,)
+	cis2 r2
+}
+third = {
+	fis8( gis) fis( gis) b4 gis8( fis)
+	fis4. b,8 gis'8 fis gis( e) e2 ~e2
+}
+\score{
+\relative {
+	\key e \major
+	\time 2/4
+	\tempo "Moderato"
+	\first
+	\repeat volta 2 {
+		\first
+		\second
+		\third
+	} \third\fine
+}%
+\layout { }
+%\midi { }
+}
+\end{lilypond}
+\vfil\eject

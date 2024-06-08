@@ -1,0 +1,216 @@
+%%% 2023年 1月30日 星期一 13时46分30秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+%\documentclass[a4paper,twoside]{article}
+\documentclass[a4paper,twoside]{memoir}
+
+\input{preamble.tex}
+
+\begin{document}
+
+\chapterstyle{daleif1}
+\marktrue
+\multimarktrue
+
+\maketitle
+\subtitlepage
+
+\thispagestyle{empty}
+{\obeylines\parindent=0pt\smallskip
+\textcopyright 2023,2024 李小丹
+本书采用\ccby 协议进行授权。
+\texttwemoji{e-mail}\ \myemail
+\href{https://shuhenglee.github.io}%
+{\texttwemoji{link}\ https://shuhenglee.github.io}
+%\href{https://leeshuheng.wordpress.com}%
+%{\faWordpress https://leeshuheng.wordpress.com}
+\href{https://github.com/shuhenglee/score\_set}%
+{\kern-4pt\faGithub https://github.com/shuhenglee/score\_set}
+\bigskip
+本书内容适合玩小提琴或14孔半音阶口琴的新手。\bigskip}
+
+\noindent\printbookver
+\vfill
+\hfill\theqr{\faGithub}%
+{https://raw.githubusercontent.com/shuhenglee/score_set/main/score_set.pdf}{扫码下载本书}
+\eject
+
+% cf. manual latexsource2e
+% cf. manual everypage
+% cf. manual ltshipout
+% cf. https://www.latex-project.org//news/2020/10/01/issue32-of-latex2e-released/
+% cf. https://tex.stackexchange.com/questions/615010/how-can-i-use-latex-hooks-in-historical-versions-of-tex-live
+%\AddEverypageHook{⟨code⟩} ≡ \AddToHook{shipout/background}{\put(1in,-1in){⟨code ⟩}}
+\AddEverypageHook{\epcall}
+
+\frontmatter
+
+\chapter{Preface}
+我把演奏某种乐器作为爱好，主要是缘于上小学时教我音乐的于老师以及
+教我小提琴的郭老师。因为一些书买不到，
+当初我的好多提琴谱都是郭老师一笔一笔抄出来的，非常辛苦。
+郭老师和于老师是我童年时代最好的老师。
+最近我学习半音阶口琴，也想手抄一些乐谱。
+但由于比较费手和钢笔水，所以果断放弃手写。
+而且我的夫人小叶子正好买了一台打印机，
+巧的是我有一台电脑，更巧的是这台电脑上刚好有编辑排版的软件。
+末页那张风信子的照片也是小叶子拍摄的。
+
+本书使用\LaTeX (\TeX\ Live 2022\footnote{现已升级至\TeX\ Live 2024})
+和lilypond-book(GNU LilyPond 2.24.0\footnote{现已升级至GNU LilyPond 2.24.3})排版，
+使用vim编写前两者的脚本。\LaTeX 和vim都是我十几年的老朋友了。
+这些软件一如既往的优秀是本书能够成功排版的关键。
+十几年前，我想在Sun贡献的OpenOffice上写文章，但我放弃了。
+因为\LaTeX 已足够，而且\LaTeX 可以与vim相互配合。
+vim的祖宗vi是Sun的首席科学家创建的，看来我并没有绕开Sun.
+\LaTeX 是\TeX 的一个format，而\TeX 是计算机科学家高德纳老先生创造的。
+作为排版软件，\TeX 非常强大。LilyPond是我的新朋友，通过这几天
+的使用，发现LilyPond排版五线谱非常好用。
+我选择LilyPond是因为她基于\TeX 并与\LaTeX 兼容，
+而且语法相对简单。
+从她的构成来看，感觉LilyPond更像是lisp和\TeX 的混合体。
+我很多年前学过Common Lisp，但因为没有使用她，就忘光了。
+lisp也是老古董了！LilyPond毕竟是GNU的东西，有lisp是很正常的。
+再说，我也有点儿Oldschool风格。
+当然，即使不会lisp和\TeX ，也可以使用LilyPond排版各种乐谱，
+LilyPond可以单独使用。
+
+我们家的小狗狗对本书亦有贡献。
+Alpha\texttwemoji{dog face}极不情愿、勉为其难的贡献
+出自己的照片作为本书的封面，作为报复，Alpha在我编写代码的
+过程中不断使用它的毛来攻击我的电脑，
+如果没有小叶子的鼓励和支持，我可能早就被Alpha打败了。
+Alpha不是老派的狗狗，它既不会在
+月圆之夜伏案计算下列级数
+\begin{equation*}
+	1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \frac{1}{9} - \cdots,
+\end{equation*}
+然后夺门而出、狂奔到荒无人烟的山顶，以该级数的结果
+为角度抬起狗头仰天长啸；
+也不会在凌晨四点半被闹钟叫醒，跑去浓雾弥漫的牧场当羊倌，去伺候那些由于毛发浓密而不愿奔跑的绵羊，
+却又任凭自己的狗毛不断脱落。
+落草为寇和社畜的生活它都不喜欢。除排泄外，Alpha只想
+静静地躺在家里，有酸奶喝便是极好的。然后用它的狗毛占领全宇宙。
+如果十几万年以后的人类在距离地球几万光年的类地行星
+上发现Alpha的毛，我是不会感到惊讶的。
+引力无法阻止Alpha的毛，
+牛顿、爱因斯坦、波尔、海森堡、波恩、薛定谔、狄拉克、泡利、
+费曼、杨振宁、李小丹、埃伦费斯特、吴健雄、朗道、
+孙悟空、白素贞、尔康等
+你能列举的任何物理学家所发现的定理，
+以及寒暑假的任何大神都无法阻止Alpha的毛。
+它的毛是漫威宇宙遗留在人类世界的产物。
+
+%%% FIXME
+本书更新可在%
+\href{https://github.com/shuhenglee/score\_set}%
+{\faGithub https://github.com/shuhenglee/score\_set}
+免费下载。该网站经常连不上，连上了也不一定能下载，能下载了速度也很慢。
+总之，就是能不能下载看缘份。另外，本书所包含曲目都提供了MIDI,
+可在上述网站免费下载。
+
+本书将不定期更新...
+
+由于编者乐理知识的欠缺，而且还需要抵御大量狗毛袭击，
+本书不可避免的存在一些错误且更新较慢；
+某些曲谱是我小时候学习小提琴用的，为了适应我初学者的水平，
+郭老师对曲谱进行了修改；
+又由于编者比较懒，所以在乐谱中省略了较长的前奏和间奏，请凑合着演奏。
+\vfil\break
+
+\pagecolor{Cornsilk} %pagecolor from this page.
+\hypertarget{chap:cont}{}
+\tableofcontents
+\vfill\break
+
+\mainmatter
+
+%%% ============================
+\chapter{民歌}
+
+\circlefive
+\vfil\break
+
+\input{ms_ly.tex}
+\input{rrv_ly.tex}
+\input{sr_ly.tex}
+\input{rh_ly.tex}
+\input{bbg_ly.tex}
+\input{jskw_ly.tex}
+\input{heysn_ly.tex}
+\input{jb_ly.tex}
+\input{hslf_ly.tex}
+\input{db_lu.tex}
+
+%%% ============================
+\chapter{古典}
+
+\circlefive
+\vfil\break
+
+\input{lu_ly.tex}
+\input{mu_ly.tex}
+\input{fs_ly.tex}
+\input{cjm_ly.tex}
+\input{tg_ly.tex}
+\input{br_ly.tex}
+\input{min2_ly.tex}
+\input{wit_ly.tex}
+\input{gv_ly.tex}
+\input{hc_ly.tex}
+\input{dm_ly.tex}
+\input{ls_ly.tex}
+\input{tw_ly.tex}
+\input{tgjl_ly.tex}
+\input{slbd_ly.tex}
+\input{larg_ly.tex}
+
+%%% ============================
+\chapter{歌曲}
+
+\circlefive
+\vfil\break
+
+\input{sf_ly.tex}
+\input{yom_ly.tex}
+\input{ss_ly.tex}
+\input{fhm_ly.tex}
+\input{by_ly.tex}
+\input{cm_ly.tex}
+\input{lv90_ly.tex}
+\input{pg_ly.tex}
+\input{el_ly.tex}
+\input{sd_ly.tex}
+
+%%% ============================
+\appendix
+\chapter{附录}
+
+\circlefive
+\vfil\break
+
+\input{appendix.tex}
+\vfil\eject
+
+\backmatter
+
+\emptypage
+\leavevmode\vfill
+\hbox to \hsize {%
+	\hfil\vbox{{\lishu\fontsize{60pt}{40pt}\selectfont\hbox{未完待续}%
+		\hbox{谢谢阅读}}}\hfil}
+\vskip30pt
+\hbox to \hsize {\hfil\hbox{\includegraphics[width=5cm]{flower.jpeg}}\hfil}
+\vfill\eject
+
+
+\input{changelog.tex}
+
+\ifodd\count0 \makeemptypage1\fi
+
+\emptypage
+\picbackground{harmonicaII.jpeg}{0.2}
+\leavevmode\vfill
+\ccby\hfill
+
+\end{document}

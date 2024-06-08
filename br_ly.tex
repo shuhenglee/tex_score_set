@@ -1,0 +1,48 @@
+%%% 2023年 2月27日 星期一 12时19分21秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+\vbox{% To prevent line break.
+\tocdata{toc}{亨德尔}%
+\addsection{布列舞曲(Bourr\'ee)}{古典}
+%\seclangtit{Bourr\'ee}
+\vskip-36pt
+\composer{{\youyuan 亨德尔}}
+\composer{G.~F.~Handel}
+
+\begin{lilypond}
+\include "conf.ly"
+\score{
+\relative {
+	\tempo "Allegretto"
+	\key g \major
+	\time 4/4
+	\partial 4 d''4_\markup{\italic{\dynamic p espressivo}}\upbow d( b) c8( b) a g
+	e'4\<\downbow g2\! fis8\> e d4 c8\upbow( b) a b c a b4( g2\!) a4\upbow
+	b8\< cis d b cis d e cis d e fis d e fis g e fis g a4\mf a,--( cis--)
+	d2.\> \breathe d4_\markup{\italic{\dynamic p espressivo}}\upbow\!
+	d( b) c!8( b) a g e'4\< g2\! fis8\> e
+	d4 c8( b) a b c a b4( g2)\! a4\upbow
+	b8\< cis d b cis d e cis d e fis d e fis g e
+	fis g a4\mf a,--( cis--) d2.\> \bar "||" a'4\upbow\mf
+	a( fis\<) g8( fis) e d g4 b2(\! e,4--)
+	dis--\>( e--) fis( g8 a) g4( e2) d!4\p\upbow
+	d c8 b c4-- ~ c4-- c b8\< a b4--( d--)
+	e8( fis) g\! d c\>( b) a g fis( g) a fis d4\upbow d'\p\upbow
+	d( b) c8( b\<) a g e'4 g2\! fis8\> e
+	d4 c8( b) a b c a b4( g2) fis4\!
+	g8\pp\< a b g a b c a b c d b c d e c
+	d4\f g b, a8( g) g2. a'4\mf\upbow
+	a( fis) g8\<( fis) e d g4 b2\!( e,4--)
+	dis--( e--) fis\>( g8 a) g4( e2) d!4\p\upbow
+	d c8 b c4--( c--)  c\< b8 a b4--( d--)\!
+	e8\>( fis) g d c( b) a g\!
+	fis( g) a fis d4\upbow d'\upbow\p
+	d( b) c8( b) a g e'4\< g2\! fis8\> e
+	d4 c8( b) a b c a b4( g2\!) fis4
+	g8\pp a b g a\< b c a b c d b c d e c
+	d4--\f g-- b,-- a8_\markup{{\tiny{\italic{rit.}}}}( g) \partial 2. g2. \bar "|."
+}
+\layout { }
+% \midi { }
+}
+\end{lilypond}}
+\eject

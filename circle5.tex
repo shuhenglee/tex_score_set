@@ -1,0 +1,636 @@
+%%% 2023年 2月16日 星期四 17时12分46秒 CST
+%%% author: 李小丹(Shao-Dan Lee) 字 殊恒(Shuheng)
+
+\renewcommand{\sharp}{\kern0.1em\lilyGlyph[scale=0.9,raise=1.1]{accidentals.sharp}}
+\renewcommand{\flat}{\kern0.1em\lilyGlyph[scale=1.2,raise=0.8]{accidentals.flat}}
+
+%%% FIXME: I don't know that call macro of tex in lilypond. Hence it is ugly!
+\def\major@C{%
+	\lilypond[fragment,inline,staffsize=11]{
+		\new Staff \with {
+			\override Clef.color = "blue"}
+		\relative {
+			\omit Staff.TimeSignature
+			\override Staff.StaffSymbol.color = "blue"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			s1}}}
+
+\def\major@G{%
+	\lilypond[fragment,inline,staffsize=11]{
+		\new Staff \with {
+			\override Clef.color = "blue"}
+		\relative {
+			\omit Staff.TimeSignature
+			\override Staff.StaffSymbol.color = "blue"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			\key g \major s1}}}
+\def\major@D{%
+	\lilypond[fragment,inline,staffsize=11]{
+		\new Staff \with {
+			\override Clef.color = "blue"}
+		\relative {
+			\omit Staff.TimeSignature
+			\override Staff.StaffSymbol.color = "blue"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			\key d \major s1}}}
+\def\major@A{%
+	\lilypond[fragment,inline,staffsize=11]{
+		\new Staff \with {
+			\override Clef.color = "blue"}
+		\relative {
+			\omit Staff.TimeSignature
+			\override Staff.StaffSymbol.color = "blue"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			\key a \major s1}}}
+\def\major@E{%
+	\lilypond[fragment,inline,staffsize=11]{
+		\new Staff \with {
+			\override Clef.color = "blue"}
+		\relative {
+			\omit Staff.TimeSignature
+			\override Staff.StaffSymbol.color = "blue"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			\key e \major s1}}}
+\def\major@B{%
+	\lilypond[fragment,inline,staffsize=11]{
+		\new Staff \with {
+			\override Clef.color = "blue"}
+		\relative {
+			\omit Staff.TimeSignature
+			\override Staff.StaffSymbol.color = "blue"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			\key b \major s1}}}
+\def\major@FIS{%
+	\lilypond[fragment,inline,staffsize=11]{
+		\new Staff \with {
+			\override Clef.color = "blue"}
+		\relative {
+			\omit Staff.TimeSignature
+			\override Staff.StaffSymbol.color = "blue"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			\key fis \major s1}}}
+\def\major@CIS{%
+	\lilypond[fragment,inline,staffsize=11]{
+		\new Staff \with {
+			\override Clef.color = "blue"}
+		\relative {
+			\omit Staff.TimeSignature
+			\override Staff.StaffSymbol.color = "blue"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			\key cis \major s1}}}
+\def\major@AES{%
+	\lilypond[fragment,inline,staffsize=11]{
+		\new Staff \with {
+			\override Clef.color = "blue"}
+		\relative {
+			\omit Staff.TimeSignature
+			\override Staff.StaffSymbol.color = "blue"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			\key aes \major s1}}}
+\def\major@EES{%
+	\lilypond[fragment,inline,staffsize=11]{
+		\new Staff \with {
+			\override Clef.color = "blue"}
+		\relative {
+			\omit Staff.TimeSignature
+			\override Staff.StaffSymbol.color = "blue"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			\key ees \major s1}}}
+\def\major@BES{%
+	\lilypond[fragment,inline,staffsize=11]{
+		\new Staff \with {
+			\override Clef.color = "blue"}
+		\relative {
+			\omit Staff.TimeSignature
+			\override Staff.StaffSymbol.color = "blue"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			\key bes \major s1}}}
+\def\major@F{%
+	\lilypond[fragment,inline,staffsize=11]{
+		\new Staff \with {
+			\override Clef.color = "blue"}
+		\relative {
+			\omit Staff.TimeSignature
+			\override Staff.StaffSymbol.color = "blue"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			\key f \major s1}}}
+\def\major@CES{%
+	\lilypond[fragment,inline,staffsize=11]{
+		\new Staff \with {
+			\override Clef.color = "blue"}
+		\relative {
+			\omit Staff.TimeSignature
+			\override Staff.StaffSymbol.color = "blue"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			\key ces \major s1}}}
+\def\major@GES{%
+	\lilypond[fragment,inline,staffsize=11]{
+		\new Staff \with {
+			\override Clef.color = "blue"}
+		\relative {
+			\omit Staff.TimeSignature
+			\override Staff.StaffSymbol.color = "blue"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			\key ges \major s1}}}
+\def\major@DES{%
+	\lilypond[fragment,inline,staffsize=11]{
+		\new Staff \with {
+			\override Clef.color = "blue"}
+		\relative {
+			\omit Staff.TimeSignature
+			\override Staff.StaffSymbol.color = "blue"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			\key des \major s1}}}
+
+\def\circlefive{%
+\begin{center}
+	\begin{tikzpicture}[new set=import nodes]
+		\begin{scope}[nodes={set=import nodes}]
+			\node (a) at (0, 0) [ForestGreen, circle, draw, minimum size=0.36\vsize] {};
+			\shade[shading=color wheel] [even odd rule]
+			  (0,0) circle (0.182\vsize)
+			  (0,0) circle (0.178\vsize);
+		\end{scope}
+		\graph[nodes = {draw, circle}, clockwise=12,
+			tonic/.style={align=center, rectangle, minimum size=10mm,
+				font=\footnotesize, very thick,draw=black!30,
+				top color=yellow!20,bottom color=blue!20},
+			outer/.style={minimum size=10mm, font=\footnotesize,
+				very thick,draw=black!30, top color=red!20,bottom color=blue!20},
+			inner/.style={minimum size=10mm, font=\small,
+				very thick,draw=black!30, top color=blue!20,bottom color=green!20,}] {
+		(import nodes);
+		{ [name=in, radius=0.15\vsize] {"a"[inner], "e"[inner], "b"[inner], "f\,\sharp"[inner],
+				"c\sharp"[inner], "g\sharp /a\flat"[inner], "d\sharp /e\flat"[inner],
+				"a\sharp /b\flat"[inner], "f"[inner], "c"[inner], "g"[inner], "d"[inner]};},
+		{ [name=out, radius=0.21\vsize] {"C"[outer], "G"[outer], "D"[outer], "A"[outer], "E"[outer],
+				"B/C\flat"[outer], "F\sharp/G\flat"[outer], "C\sharp /D\flat"[outer],
+				"A\flat"[outer], "E\flat"[outer], "B\flat"[outer], "F"[outer]};},
+		{ [name=tonic, radius=0.28\vsize] {"\major@C"[tonic], "\major@G"[tonic], "\major@D"[tonic], "\major@A"[tonic],
+			"\major@E"[tonic], "\major@B\\\major@CES"[tonic],
+			"\major@FIS\\\major@GES"[tonic], "\major@CIS\\\major@DES"[tonic],
+			"\major@AES"[tonic], "\major@EES"[tonic], "\major@BES"[tonic], "\major@F"[tonic],};}};
+	\end{tikzpicture}
+\end{center}
+}%
+
+\def\score@majorCIS{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key cis \major
+		\time 4/4
+		\easyHeadsOn
+		cis'4 dis eis fis gis ais bis cis\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@majorFIS{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key fis \major
+		\time 4/4
+		\easyHeadsOn
+		fis'4 gis ais b cis dis eis fis\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@majorB{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key b \major
+		\time 4/4
+		\easyHeadsOn
+		b'4 cis dis e fis gis ais b\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@majorE{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key e \major
+		\time 4/4
+		\easyHeadsOn
+		e'4 fis gis a b cis dis e \bar "|."
+	}
+\end{lilypond}
+}
+\def\score@majorA{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key a \major
+		\time 4/4
+		\easyHeadsOn
+		a'4 b cis d e fis gis a
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@majorD{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key d \major
+		\time 4/4
+		\easyHeadsOn
+		d'4 e fis g a b cis d
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@majorG{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key g \major
+		\time 4/4
+		\easyHeadsOn
+		g'4 a b c d e fis g
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@majorC{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key c \major
+		\time 4/4
+		\easyHeadsOn
+		c'4 d e f g a b c
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@majorF{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key f \major
+		\time 4/4
+		\easyHeadsOn
+		f'4 g a bes c d e f
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@majorBES{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key bes \major
+		\time 4/4
+		\easyHeadsOn
+		bes'4 c d ees f g a bes
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@majorEES{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key ees \major
+		\time 4/4
+		\easyHeadsOn
+		ees'4 f g aes bes c d ees
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@majorAES{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key aes \major
+		\time 4/4
+		\easyHeadsOn
+		aes'4 bes c des ees f g aes
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@majorDES{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key des \major
+		\time 4/4
+		\easyHeadsOn
+		des'4 ees f ges aes bes c des
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@majorGES{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key ges \major
+		\time 4/4
+		\easyHeadsOn
+		ges'4 aes bes ces des ees f ges
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@majorCES{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key ces \major
+		\time 4/4
+		\easyHeadsOn
+		ces'4 des ees fes ges aes bes ces
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@minorais{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key ais \minor
+		\time 4/4
+		\easyHeadsOn
+		ais'4 bis cis dis eis fis gis ais
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@minordis{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key dis \minor
+		\time 4/4
+		\easyHeadsOn
+		dis'4 eis fis gis ais b cis dis
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@minorgis{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key gis \minor
+		\time 4/4
+		\easyHeadsOn
+		gis'4 ais b cis dis e fis gis
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@minorcis{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key cis \minor
+		\time 4/4
+		\easyHeadsOn
+		cis'4 dis e fis gis a b cis
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@minorfis{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key fis \minor
+		\time 4/4
+		\easyHeadsOn
+		fis'4 gis a b cis d e fis
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@minorb{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key b \minor
+		\time 4/4
+		\easyHeadsOn
+		b'4 cis d e fis g a b
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@minore{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key e \minor
+		\time 4/4
+		\easyHeadsOn
+		e'4 fis g a b c d e
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@minora{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key a \minor
+		\time 4/4
+		\easyHeadsOn
+		a'4 b c d e f g a
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@minord{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key d \minor
+		\time 4/4
+		\easyHeadsOn
+		d'4 e f g a bes c d
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@minorg{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key g \minor
+		\time 4/4
+		\easyHeadsOn
+		g'4 a bes c d ees f g
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@minorc{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key c \minor
+		\time 4/4
+		\easyHeadsOn
+		c'4 d ees f g aes bes c
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@minorf{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key f \minor
+		\time 4/4
+		\easyHeadsOn
+		f'4 g aes bes c des ees f
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@minorbes{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key bes \minor
+		\time 4/4
+		\easyHeadsOn
+		bes'4 c des ees f ges aes bes
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@minorees{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key ees \minor
+		\time 4/4
+		\easyHeadsOn
+		ees'4 f ges aes bes ces des ees
+		\bar "|."
+	}
+\end{lilypond}
+}
+\def\score@minoraes{%
+\begin{lilypond}
+	\include "num_head.ly"
+	\relative {
+		\override Staff.Clef.full-size-change = ##t
+		\key aes \minor
+		\time 4/4
+		\easyHeadsOn
+		aes'4 bes ces des ees fes ges aes
+		\bar "|."
+	}
+\end{lilypond}
+}
+
+\def\tabmajorminor{%
+%\begin{center}
+%\setlength{\tabcolsep}{0pt}
+\begin{longtabu}{|[2pt]c|r|[1pt]c|r|[2pt]}
+	\tabucline[2pt]{1-4}
+	\multicolumn{2}{|[2pt]c}{大调} & \multicolumn{2}{c|[2pt]}{自然小调}\\\tabucline[1pt]{1-4}
+	C\sharp & \score@majorCIS & a\sharp & \score@minorais\\\hline
+	F\sharp & \score@majorFIS & d\sharp & \score@minordis\\\hline
+	B & \score@majorB         & g\sharp & \score@minorgis\\\hline
+	E & \score@majorE         & c\sharp & \score@minorcis\\\hline
+	A & \score@majorA         & f\sharp & \score@minorfis\\\hline
+	D & \score@majorD         & b & \score@minorb\\\hline
+	G & \score@majorG         & e & \score@minore\\\hline
+	C & \score@majorC         & a & \score@minora\\\hline
+	F & \score@majorF         & d & \score@minord\\\hline
+	B\flat & \score@majorBES  & g & \score@minorg\\\hline
+	E\flat & \score@majorEES  & c & \score@minorc\\\hline
+	A\flat & \score@majorAES  & f & \score@minorf\\\hline
+	D\flat & \score@majorDES  & b\flat & \score@minorbes\\\hline
+	G\flat & \score@majorGES  & e\flat & \score@minorees\\\hline
+	C\flat & \score@majorCES  & a\flat & \score@minoraes\\\tabucline[2pt]{1-4}
+\end{longtabu}
+% \begin{longtabu}{|[2pt]c|r|[2pt]}
+% 	\tabucline[2pt]{1-2}
+% 	\multicolumn{2}{|[2pt]c|[2pt]}{自然小调}\\\tabucline[1pt]{1-2}
+% 	a\sharp & \score@minorais\\\hline
+% 	d\sharp & \score@minordis\\\hline
+% 	g\sharp & \score@minorgis\\\hline
+% 	c\sharp & \score@minorcis\\\hline
+% 	f\sharp & \score@minorfis\\\hline
+% 	b & \score@minorb\\\hline
+% 	e & \score@minore\\\hline
+% 	a & \score@minora\\\hline
+% 	d & \score@minord\\\hline
+% 	g & \score@minorg\\\hline
+% 	c & \score@minorc\\\hline
+% 	f & \score@minorf\\\hline
+% 	b\flat & \score@minorbes\\\hline
+% 	e\flat & \score@minorees\\\hline
+% 	a\flat & \score@minoraes\\\tabucline[2pt]{1-2}
+% \end{longtabu}
+%\end{center}
+}%

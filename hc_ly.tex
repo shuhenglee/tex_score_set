@@ -1,0 +1,43 @@
+%%% 2023年 4月 3日 星期一 13时37分06秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\leavevmode\vfil
+\tocdata{toc}{Weber}
+\addsection{猎人的合唱}{古典}
+\seclangtit{Hunters' Chorus}
+\composer{{\youyuan 韦伯}}
+\composer{C.~M.~von.~Weber}
+\begin{lilypond}
+	\include "conf.ly"
+\score{
+\relative {
+	\key g \major
+	\time 2/4
+	\tempo "Allegro"
+	\partial 8 d'8\upbow\f
+	g4\downbow g16( a b c) d4 b8-. b-.
+	a( d) a-. d-. b16( c b a)
+	g8-.\upbow( d-.\upbow) \break g4\downbow g16( a b c)
+	d4 b8-. b-. a( d) cis-. e-. d4 r8 a\upbow \break
+	b4 b8-. b-. g4 g8-. g-. c!4 c8-. c-.
+	a4\upbow r8 a\upbow \break b4 b8-. b-.
+	c4 b8-. b-. a4 b16( a g a) b4 g8-.\upbow( g8-.) \break
+	b4\downbow b8-. b-. d( c) b-. b-.
+	b16( a g a) b8-.\upbow( a-.) g4 r8 d\upbow \break
+	d8->-.\open d16\open d\open
+	\repeat unfold 3 {d8->-. d16 d}
+\repeat volta 2 {
+	g4->\downbow d8-. b'-. g4->\upbow d8-. b'-.\break
+	\repeat unfold 4 {d16\downbow( c) a8-.}
+	g4->\downbow d8-. b'-. g4->\upbow d8-. b'-.\break
+	\repeat unfold 4 {d16\downbow( c) a8-.}
+	b8->\ff g16 b d4-> b8-> g16 b d4->
+\alternative {
+	\volta 1 {b8\f g16 g g8 b a4. r8}
+	\volta 2 {b8\f g16 g g8-.\upbow( g-.) g4. r8\fine}}}
+}
+\layout { }
+%\midi { }
+}
+\end{lilypond}
+\vfil\eject

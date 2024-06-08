@@ -1,0 +1,52 @@
+%%% 2023年 2月 1日 星期三 18时46分31秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\hbox{}\vskip0pt plus 1fil
+\tocdata{toc}{Hedy West}
+\addsection{Five Hundred Miles}{歌曲}
+
+~\hfill\textit{Hedy West}
+
+\begin{lilypond}
+\layout {
+	indent = #0
+	line-width = #164
+ 	\context {%
+ 		\Score
+ 		\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 14)
+ 	}
+}
+\score{
+\relative {%
+	\set Score.barNumberVisibility = #all-bar-numbers-visible
+	%\override Score.BarNumber.break-visibility = #all-visible
+	\override Score.BarNumber.break-visibility = #end-of-line-invisible
+	\tempo "Moderately slow"
+	\key c \major
+	\time 4/4
+	r4 g'4 a c e4. e8 d4 c e2 d4 c d4. e8 d[ c] ~c4
+	a2 a4 c d4. e8 d[ c] ~c4 g4. g8 a4 c c1
+	r4 r8 g8 a4 c e4. e8 d4 c e4. e8 d4 c
+	d4. e8 d[ c] ~c4 a2 a4 c d4. e8 d[ c] ~c4 g4. g8 a4 c c1
+	r2 a4 c e2 d4 c e2 d4 c d4. e8 d[ c] ~c4 a2 a4 c
+	d4. e8 d[ c] ~c4 a4. g8 a4 c d1
+	r4 r8 g,8 a4 c e4. e8 d[ c] ~c4 e4. e8 d4 c d4. e8 d[ c] ~c4
+	a2 a4 c d4. e8 d[ c] ~c4 g4. g8 a4 c c1 \bar "||"
+	r2 a4 c e2 d4 c e2. d8 c d4. e8 d[ c] ~c4
+	a2 a4 c d4. e8 d[ c] ~c4 a4. g8 a4 c d1
+	r4 r8 g, a4 c e4. e8 d[ c] ~c4
+	e4. e8 d4 c d4. e8 d[ c] ~c4 a2 a4 c
+	d4. e8 d[ c] ~c4 g4. g8 a4 c c1
+	r2 a4 c e4. e8 d4 c e2 d4 c
+	d4. e8 d[ c] ~c4 a2 a4 c d4. e8 d[ c] ~c4
+	a4. g8 a4 c d1 r4 r8 g, a4 c e4. e8 d4 c e4. e8 d4 c
+	d4. e8 d[ c] ~c4  a2 a4 c d4. e8 d[ c] ~c4
+	g4. g8 a4 c c1
+	\repeat unfold 2 {r2 a4 c d4. e8 d[ c] ~c4
+	g4. g8 a4 c c1\fermata}
+}%
+\layout { }
+% \midi { }
+}
+\end{lilypond}
+\vskip0pt plus 1fil\break

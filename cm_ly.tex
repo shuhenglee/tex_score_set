@@ -1,0 +1,106 @@
+%%% 2023年 3月 3日 星期五 12时40分57秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\hbox{}\vfil
+\tocdata{toc}{高晓松}
+\addsection{同桌的你}{歌曲}
+\composer{{\youyuan 高晓松}}
+% \begin{lilypond}
+% \include "conf.ly"
+% music = \fixed c' {
+% \set Score.dalSegnoTextFormatter = #format-dal-segno-text-brief f1
+% \repeat segno 3 {
+% g1 \alternative {
+% \volta 1,2 { a1 }
+% \volta 3 \volta #'() {
+% \section
+% \sectionLabel "Coda" }
+% } }
+% b1
+% \fine }
+% \score{\music}
+% \score{\unfoldRepeats\music}
+% \end{lilypond}
+% 
+% \begin{lilypond}
+% \fixed c' {
+% \repeat segno 2 {
+% \volta #'() { \segnoMark 2 } g1
+% \alternative {
+% \volta 1 {
+% \volta #'() { \codaMark 2 } \repeat unfold 8 { a4 }
+% }
+% \volta 2 \volta #'() {
+% \section
+% \sectionLabel "Coda" }
+% } }
+% b1
+% \fine }
+% \end{lilypond}
+% \begin{lilypond}
+% \include "conf.ly"
+% \relative {%
+% 	\key d \major
+% 	\time 6/8
+% 	\tempo "Moderato"
+% 	%\repeat segno 2{
+% 	\repeat volta 3 {
+% 		\repeat volta 2 {
+% 		a'8 a a a fis g a4. d
+% 		b8 b b b g b a2 r4
+% 		a8 a a a cis b g4. g4.
+% 		g8 g g g fis8. e16 d2 r4}
+% 	d'8 d d d a b d4 d8 fis4.
+% 	e8 e e e8. d16 cis8 b2 r4
+% 	cis8 cis cis cis cis d e4. a,8 r4
+% 	cis8 cis d e d cis}%}
+% 	\alternative {
+% 		\volta 1,2 {d4.~d4 r8}
+% 		\volta 3 {d2 r4}}
+% 	d4 d8 d a b d4. fis e4 e8 e d cis b4.~b
+% 	cis4 cis8 cis cis d e4. a,
+% 	cis8 cis d e d cis d4.~d
+% 	\key e \major
+% 	e4 e8 e b cis e4. gis fis4 fis8 fis e dis cis4.~cis
+% 	dis8 dis dis dis dis e fis4. b,
+% 	dis8 dis e fis e dis fis4.( fis fis fis)
+% 	e( e e e)\bar "|."
+% }%
+% \end{lilypond}
+\begin{lilypond}
+\include "conf.ly"
+first = {
+	a'8 a a a fis g a4. d
+	b8 b b b g b a2 r4
+	a8 a a a cis b g4. g4.
+	g8 g g g fis8. e16 d2 r4}
+second = {
+	d'8 d d d a b d4 d8 fis4.
+	e8 e e e8. d16 cis8 b2 r4
+	cis8 cis cis cis cis d e4. a,8 r4
+	cis8 cis d e d cis d4.~d4 r8}
+\score {
+\relative {
+	\key d \major
+	\time 6/8
+	\tempo "Moderato"
+	\repeat segno 3{
+		\first
+	\alternative {
+		\volta 1,2 {\volta #'() { \codaMark 1 }
+			\first \second}
+		\volta 3 {d2 r4}}}
+	d4 d8 d a b d4. fis e4 e8 e d cis b4.~b
+	cis4 cis8 cis cis d e4. a,
+	cis8 cis d e d cis d4.~d
+	\key e \major
+	e4 e8 e b cis e4. gis fis4 fis8 fis e dis cis4.~cis
+	dis8 dis dis dis dis e fis4. b,
+	dis8 dis e fis e dis fis4. ~fis ~fis ~fis
+	e ~e ~e ~e\fine
+}%
+\layout { }
+% \midi { }
+}
+\end{lilypond}
+\vfil\eject

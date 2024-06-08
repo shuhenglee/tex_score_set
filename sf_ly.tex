@@ -1,0 +1,66 @@
+%%% 2023年 1月31日 星期二 14时00分11秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+% \phantomsection
+% \addcontentsline{toc}{section}{\protect\numberline{}\textbf{Scarborough Fair}}
+% \section*{Scarborough Fair}
+\hbox{}\vskip0pt plus 1fil
+\tocdata{toc}{Paul Simon}
+\addsection{Scarborough Fair}{歌曲}
+
+\hfill\emph{Paul Simon}
+\begin{lilypond}
+% \paper { #(set-default-paper-size "a4") }
+\layout {
+	indent = #0
+	line-width = #164
+ 	\context {%
+ 		\Score
+ 		\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 16)
+ 	}
+}
+% \header {
+% 	title = "Scarborough Fair"
+% 	%meter = "Hymn"
+% 	arranger = "Paul Simon"
+% }
+\score {
+\relative c'' {%
+	\set Score.barNumberVisibility = #all-bar-numbers-visible
+	%\override Score.BarNumber.break-visibility = #all-visible
+	\override Score.BarNumber.break-visibility = #end-of-line-invisible
+	\tempo "Moderato"
+	\key g \major
+	\time 3/4
+	e,2 e4 b'8 b4. ~b8 b
+	fis4. g8 fis4 e2. ~e
+	r4 b'4 \< d \! e2 d4 b4 cis a
+	b2. ~b  ~b  ~b4 r4 e
+	e2 e4 d2 b4 b \> a g \! fis2. ~fis
+	e2 \< b'4 \! a2 g4 fis \> e d \! e2. ~e ~e ~e\bar "||"
+	\repeat unfold 3 {e4}
+	\repeat unfold 3 {b'4}
+	fis4 g fis e2. ~e
+	r4 b' d e2 d4 b cis a b2. ~b ~b
+	r2 e4 e2 e4 d2 b4
+	b4 ( a) g fis2. ~fis
+	e2 b'4 a2 g4 fis4 e d e2. ~e ~e ~e \bar "||"
+	\repeat unfold 3 {e4}
+	\repeat unfold 3 {b'4}
+	fis4 g fis e2. ~e
+	r4 b' d e2 d4 b cis a b2. ~b ~b
+	r2 e4 e e e d2 b4
+	b4 ( a) g fis2. ~fis
+	e2 b'4 a2 g4 fis e d e2. ~e ~e ~e \bar "||"
+	e4 e e b' b b fis g fis e e2 ~e2.
+	r4 b' d e2 d4 b cis a b2. ~b ~b
+	r2 e4 e e e d2 b4
+	b4 ( a) g fis2. ~fis
+	e2 b'4 a2 g4 fis e d e2. ~e ~e r2 r4
+	e2. ~e ~e2 fis4 r4 e'2\fermata \bar "|."
+}%
+\layout { }
+%\midi { }
+}
+\end{lilypond}
+\vskip0pt plus 1fil\break

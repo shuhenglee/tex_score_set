@@ -1,0 +1,93 @@
+%%% 2023年 2月 3日 星期五 15时23分21秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\leavevmode\vfil%
+\addsection{小红帽}{民歌}
+\vbox{% To prevent page break
+\vskip-10pt\composer{{\youyuan 巴西民歌}}
+\begin{lilypond}
+\layout {
+	indent = #0
+	line-width = #164
+ 	\context {%
+ 		\Score
+ 		\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 16)
+ 	}
+}
+\score{
+\relative {%
+	\set Score.barNumberVisibility = #all-bar-numbers-visible
+	%\override Score.BarNumber.break-visibility = #all-visible
+	\override Score.BarNumber.break-visibility = #end-of-line-invisible
+	\tempo "Allegreto"
+	\key c \major
+	\time 2/4
+	c''8 d e f g4 e8 c
+	c'4 a8 f g g e4
+	c8 d e f g e d c
+	d4 e d g
+	c,8 d e f g4 e8 c c'4 a8 f g4 e
+	c8 d e f g e d c
+	d4 e c c
+	c'4 a8 f g g c,4
+	c'4 a8 f g4 e c8 d e f g e d c
+	d4 e c c \bar "|."
+}%
+\layout { }
+%\midi { }
+}
+\end{lilypond}
+\addsection{友谊地久天长}{民歌}
+\vskip-10pt\composer{{\youyuan 苏格兰民歌}}
+\begin{lilypond}
+\layout {
+	indent = #0
+	line-width = #164
+ 	\context {%
+ 		\Score
+ 		\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 16)
+ 	}
+}
+\score {
+\relative {%
+	\set Score.barNumberVisibility = #all-bar-numbers-visible
+	%\override Score.BarNumber.break-visibility = #all-visible
+	\override Score.BarNumber.break-visibility = #end-of-line-invisible
+	\tempo "Moderato cantabile"
+	\key c \major
+	\time 4/4
+	\partial 4 d'\mp g4. g8 g4 b a4. g8 a4 b g4.\< g8 b4 d e2\mf r4 e
+	d4. b8 b4 g a4. g8 a4 b g4.\> e8 e4 d | g2\! r4 e'\mp
+	d4. b8 b4 g a4. g8 a4 e' d4.\< b8 b4 d e2\! r4 g\mp
+	d4. b8 b4 g a4. g8 a4 b8 ( a) g4. e8\> e4 d g2.\p \bar "|."
+}%
+\layout { }
+%\midi { }
+}
+\end{lilypond}
+\addsection{茉莉花}{民歌}
+\vskip-10pt\composer{{\youyuan 江苏民歌}}
+\begin{lilypond}
+\include "conf.ly"
+\score {
+\relative {%
+	\key f \major
+	\time 2/4
+	\tempo "Allegretto cantabile"
+	a'16( g a c) d( c f d) c( a c4 d8)
+	f( g16 a) g( f d f) c2
+	c16( a c4 d8) f( g16 a) g( f d8)
+	c( g) a16( c a g) f( d f4.)
+	a16( g f8) g8.( a16) c8( d16 f) d8( c)
+	c16( a g8) a16( c a g) f( g d4 f8)
+	g8.( a16) f( g f d) f( d c4.)
+	a'16( g f8) g8.( a16) c8( d16 f) d8( c)
+	c16( a g8) a16( c a g) f( g d4 f8)
+	g'8.( a16) f( g f d) c_\markup{\small\italic{rit.}}( d f a g f d f)
+	c2\>\fermata \bar "|."\!
+}%
+\layout { }
+%\midi { }
+}
+\end{lilypond}}
+\vfil\eject

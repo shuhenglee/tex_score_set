@@ -1,0 +1,112 @@
+%%% 2023年 2月 3日 星期五 11时36分36秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\hbox{}\vskip-2pt
+\tocdata{toc}{舒伯特}
+\addsection{摇篮曲}{古典}
+\seclangtit{Lullaby}
+\composer{{\youyuan 舒伯特}}
+\composer{F. Schubert}
+\begin{lilypond}
+\layout {
+	indent = #0
+	line-width = #164
+ 	\context {%
+ 		\Score
+ 		\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 16)
+ 	}
+}
+\score{
+\relative {%
+	\set Score.barNumberVisibility = #all-bar-numbers-visible
+	%\override Score.BarNumber.break-visibility = #all-visible
+	\override Score.BarNumber.break-visibility = #end-of-line-invisible
+	\tempo "Andante"
+	\key g \major
+	\time 4/4
+	b'4 d a8. ( b16) c4 b8 b a16 ( g fis g) a4 ( d,)
+	b'4 d a8. ( b16) c4 b8 b a16 ( b c a) g4 r4
+	a4. a8 b8. ( a16) g4 d'8. ( e32 d) c8 ( b) a4 d,
+	b'4 d a8. ( b16) c4 b8 b a16 ( b c a) g4 r4 r1 r1 \bar "|."
+}%
+\layout { }
+% \midi { }
+}
+\end{lilypond}
+\vskip0pt plus 1fil
+\tocdata{toc}{勃拉姆斯}
+\addsection{摇篮曲}{古典}
+\seclangtit{Lullaby}
+\composer{{\youyuan 勃拉姆斯}}
+\composer{J. Brahms}
+\begin{lilypond}
+\layout {
+	indent = #0
+	line-width = #164
+ 	\context {%
+ 		\Score
+ 		\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 16)
+ 	}
+}
+\score{
+\relative {%
+	\set Score.barNumberVisibility = #all-bar-numbers-visible
+	%\override Score.BarNumber.break-visibility = #all-visible
+	\override Score.BarNumber.break-visibility = #end-of-line-invisible
+	\tempo "Andante"
+	\key f \major
+	\time 3/4
+	\partial 8 r8 \partial 1 R1 r4 r4 a'8 a
+	c4. ( a8) a4 c4 r a8 ( c)
+	f4 e4. ( d8) d4 ( c) g8 ( a)
+	bes4( g) g8 ( a) bes4 r g8 ( bes)
+	e8 d c4 ( e) f r f,8\downbow f
+	f'2 d8 ( bes) c2 a8 ( f)
+	bes4 ( c d) \acciaccatura a8 c2 f,8\downbow f
+	f'2 d8 ( bes) c2 a8 ( f) bes8. ( c32 bes) a4 ( g)
+	f2 r8 \bar "|."
+}%
+\layout { }
+% \midi { }
+}
+\end{lilypond}
+\vskip0pt plus 1fil
+
+\tocdata{toc}{贝里}
+\addsection{很久很久以前}{古典}
+\seclangtit{Long,Long Ago}
+
+\composer{{\youyuan 贝里}}
+\composer{T. H. Bayly}
+
+\begin{lilypond}
+\layout {
+	indent = #0
+	line-width = #164
+ 	\context {%
+ 		\Score
+ 		\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 10)
+ 	}
+}
+\score{
+\relative {%
+	\set Score.barNumberVisibility = #all-bar-numbers-visible
+	%\override Score.BarNumber.break-visibility = #all-visible
+	\override Score.BarNumber.break-visibility = #end-of-line-invisible
+	\tempo "Moderato"
+	\key g \major
+	\time 4/4
+	g'4\mf g8 a b4 b8 c d4 e8 d b2
+	d4 \> c8 b a2 \! c4 \> b8 a g2 \!
+	g4\mf g8 a b4 b8 c d4 e8 d b2
+	d4 c8 b a4 b8\> a g2\p r2
+	d'4\f c8 b a4 d,8 d c'4 b8 a g2
+	d'4\p c8 b a4 d,8 d c'4 \> b8 a g2 \!
+	g4\f g8 a b4 b8 c d4 e8 d b2
+	d4 c8 b a4 b8\> a g2\p r2 \bar "|."
+}%
+\layout { }
+%\midi { }
+}
+\end{lilypond}
+\vskip0pt plus 1fil\break

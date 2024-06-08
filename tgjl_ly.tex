@@ -1,0 +1,40 @@
+%%% 2024年 2月 1日 星期四 11时47分58秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\hbox{}\vfill %it is invalid to use \noindent
+
+\tocdata{toc}{格鲁克}
+\addsection{天国精灵舞曲}{古典}
+\submtitle{选自歌剧\ 奥菲欧}
+\composer{{\youyuan 格鲁克}}
+\begin{lilypond}
+\include "conf.ly"
+\score {
+\relative {%
+	\tempo "Andante"
+	\key f \major
+	\time 3/4
+	\textLengthOn
+	c''4_\markup{\small\italic dolce} a8\<( bes c f)\!
+	f4\>( e) d\! c d8( c bes c) bes4( a) g( f'8)
+	r a, r d r c4\fp e,( f) g8( bes) a4 g8( f)
+	f4 r r \section
+	c'4\pp a8( bes c f) f4( e) d
+	c d8( c bes c) bes4( a) g( f'8)
+	r a, r d r c4 e,( f)
+	g8( bes) a4 g8( f) f2. \section \mark \default
+	a'4\p f8\<( g a bes\!) a4\>( g) f\!
+	e f8( e d c) \appoggiatura c8 b4.( a8) g4
+	c8( d e f e f) e4( d c)
+	b8( d f g f g) f4( e d) g2\cresc( a4) b2( c4)
+	g8--\f a-- c,4 \appoggiatura { d16( e } d8 c)
+	c2.\>  ~ \mark \default c4^\markup{\small\italic dolce}\p a8\<( bes c f)\!
+	f4\>( e) d\! c d8( c bes c) bes4( a) g( f'8)
+	r a, r d r c4\fp e,( f) g8( bes) a4 g8( f) f2. \fine
+}
+\layout { }
+% \midi { }
+}
+\end{lilypond}
+
+\vfill\break

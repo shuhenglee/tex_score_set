@@ -1,0 +1,114 @@
+%%% 2024年 4月 3日 星期三 10时43分47秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\hbox{}\vfill
+\tocdata{toc}{东北民歌}
+\addsection{摇篮曲}{民歌}
+%\submtitle{选自歌剧\tllangle 西克斯\trrangle}
+\composer{{\youyuan 东北民歌}}
+\begin{lilypond}
+\include "conf.ly"
+\score {
+\relative {%
+	\key f \major 
+	\tempo "Adagio cantabile"
+	\time 2/4
+	f'8( f f8. d16 c8 f f4)
+	c'8( d16 f d c a8 c a16 g g4)
+	g8( c c8. a16 g8 a16 g f4)
+	f16( d a'8 g16 f d8 c2)
+	\repeat volta 2 {
+		d16( f c d f8. g16 a g f g c8. a16)
+		g8( a a c, g' g16 e d4)
+		d'16( c a c d4) d16( c a d c4)
+		a16.( c32 a16 g f d f8 c'^\markup{\italic{\teeny{2da volta poco rit.}}}\> a16 g g f d8 c2\!)
+	}
+}
+\layout{
+%\context{
+%	\Score
+%	\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/8)
+%}
+}
+% \midi { }
+}
+\end{lilypond}
+
+\vfill
+
+\tocdata{toc}{侯德健}
+\addsection{捉泥鳅}{民歌}
+%\submtitle{选自歌剧\tllangle 西克斯\trrangle}
+\composer{{\youyuan 侯德健}}
+\composer{{\youyuan 台湾民谣}}
+\begin{lilypond}
+\include "conf.ly"
+\score {
+\relative {%
+	\key c \major 
+	\tempo "Moderato cantabile"
+	\time 4/4
+	\repeat volta 2 {
+		a'4 a8. g16 a8 g e4
+		g8[ e] e[( d)] e2
+		d4 d8. c16 d8 d g4
+		g8[ e] e[ d] e2
+		a4 a8. g16 a8 g e4
+		f8 f16 f e8 d e2
+		g4 g8. g16 g8 g b4
+		a8 a16 a a8 g a2
+		c4\f c8. c16 b4 g
+		a8\> a16 a a8 g a8.( g16 e4)\!
+		g4\< g8. g16 g8 g b4\!
+		a8 a16 a a8 g a2
+	}
+	g4\< g8. g16 g8 g b4\!\fermata
+	a8 a16 a a8 g a4 r4 \fine
+}
+\layout{
+%\context{
+%	\Score
+%	\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/8)
+%}
+}
+% \midi { }
+}
+\end{lilypond}
+
+\vfill
+
+\tocdata{toc}{王洛宾}
+\addsection{在那遥远的地方}{民歌}
+%\submtitle{选自歌剧\tllangle 西克斯\trrangle}
+\composer{{\youyuan 王洛宾}}
+\composer{{\youyuan 哈萨克族民歌}}
+\begin{lilypond}
+\include "conf.ly"
+\score {
+\relative {%
+	\key a \minor
+	\tempo "Largo cantabile"
+	\time 4/4
+	\partial 4 e''8 g
+	\repeat volta 4 {
+		a8 g16 fis e8\<( g) a4.\!( g16 fis)
+		e8[ g] g\>[ fis] e2\!
+		e8[ g] a g16 e d8 e16( d) c8 d
+		e8[ g] c,[ d] e\> d16 c b8.( a16)\!
+	\alternative {
+		\volta 1,2,3 { a2. e'8 g }
+		\volta 4 { a,1 e'8 g a g16 e d8 e16( d)
+			c8 d e_\markup{\italic{\teeny{poco rit.}}}[ g] c,[ d]
+			e8 d16 c b4\mordent\fermata a1\fermata \fine}}}
+}
+\layout{
+\context{
+	\Score
+	\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/32)
+}
+}
+% \midi { }
+}
+\end{lilypond}
+
+\vfill\break

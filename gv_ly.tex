@@ -1,0 +1,59 @@
+%%% 2023年 3月23日 星期四 12时19分11秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\leavevmode\vfil
+\tocdata{toc}{Gossec}
+\addsection{加沃特舞曲}{古典}
+\seclangtit{Gavotte}
+\composer{{\youyuan 戈塞克}}
+\composer{{F.~J.~Gossec}}
+\begin{lilypond}
+	\include "conf.ly"
+\score{
+\relative {
+	\key g \major
+	\time 2/2
+	\tempo "Allegretto"
+	\repeat segno 2 {
+	\repeat volta 2 {
+		d''8-.\mf\downbow e-. d-. b-. c-. d-. c-. a-.
+		g4-.-- \acciaccatura fis'8 g4-.-- g,-.-- r
+		c8-.\downbow d-. c-. a-. b-. c-. b-. g-.
+		a4-.-- \acciaccatura cis8 d4-.-- d,-.-- r
+		d'8-.\downbow e-. d-. b-. c-. d-. c-. a-.
+		g4-.-- \acciaccatura fis'8 g4-.-- g,-.-- r
+		b4\downbow g8 e g4 e8 cis
+		d4-.-- \acciaccatura cis'8 d4-.-- d,4-.-- r}
+	a'8-.\downbow c-. b-. d-. c-. b-. a-. g-. fis4 a c r
+	b8-.\downbow d-. c-. e-. d-. c-. b-. a-. g4 b d r
+	e8-.\mf\downbow d-. d-. c-. c-. b-. b-. a-.
+	a4_\markup{\small{\italic{rit.}}} c e r
+	d8-._\markup{\dynamic p\small{\italic{a tempo}}}\downbow
+	b-. fis-. g-. c-. a-. e-. fis-.
+	g4 \acciaccatura fis'8 g4 g,4 r
+	\volta 2 \fine
+	\volta 1 {
+	\repeat volta 2 {
+		b4--\mf\downbow^\markup{\small{\italic{più cantabile}}} b-- c-- c--
+		d8( g) fis g d4 r
+		g,4-- g-- a-- a--
+		b16[( d cis d)] e( d c b)
+		a8-.\> d,-. fis-. d-.\!
+		e4 g8-.( e-.) e'4 e,
+		d4 g8-.( d-.) d'4 d,
+		c' d, b' d,
+		a' a16( b c b) a4 r}
+	\repeat volta 2 {
+		c4--\mf\downbow^\markup{\small{\italic{(arco)}}}
+		c16( b a g) fis4 fis'4-. g-. d,-. g-. r
+		c--\downbow c16( b a g) fis4 fis'-. g-. g,-. b-. r
+		e,--\downbow g16( fis e d) c4 e'-.
+		d,-- d16( e d c) b4 d'4-.
+		c e16( d c b) a4 fis'-.\upbow
+		g-.\upbow g,-.^\markup{\small{\italic{pizz.}}} g,-. r}}}
+}
+\layout { }
+%\midi { }
+}
+\end{lilypond}
+\vfil\eject

@@ -1,0 +1,33 @@
+%%% 2023年 2月 2日 星期四 12时08分15秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\addsection{红河谷}{民歌}
+
+~\hfill{\youyuan 加拿大民歌}
+
+\begin{lilypond}
+\layout {
+	indent = #0
+	line-width = #164
+ 	\context {%
+ 		\Score
+ 		\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 16)
+ 	}
+}
+\score {
+\relative {%
+	\set Score.barNumberVisibility = #all-bar-numbers-visible
+	%\override Score.BarNumber.break-visibility = #all-visible
+	\override Score.BarNumber.break-visibility = #end-of-line-invisible
+	\tempo "Moderato"
+	\key c \major
+	\time 4/4
+	\partial 4 g'8 c e4 e8 e e4 d8 e d c ( c2) g8 c
+	e4 c8 e g4 f8 e d2. g8 f e4 e8 d c4 d8 e g f ( f2)
+	a,8 aes g4 b8 c d4 e8 d c2. r4 \bar "|."
+}%
+\layout { }
+%\midi { }
+}
+\end{lilypond}
+\vskip0pt plus 1fil

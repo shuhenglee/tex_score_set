@@ -1,0 +1,48 @@
+%%% 2023年12月28日 星期四 10时37分32秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\hbox{}\vfill %it is invalid to use \noindent
+\tocdata{toc}{聂耳}
+\addsection{金蛇狂舞}{民歌}
+%\seclangtit{The Two Grenadiers}
+\composer{聂耳}
+\begin{lilypond}
+\include "conf.ly"
+\score {
+\relative {%
+	\tempo "Allegro"
+	\key g \major
+	\time 2/4
+	\partial 4 e'8 g d e g4 d'8.\upbow( e16) c8 b a4
+	a8\upbow( d) d a c b a[ g16( a)] c8 c e, g
+	a c a16( g e g ) d4 e8 e d4
+	d'8\downbow d c c d d a4
+	a8( d) c c e, g a4 c8\upbow( a) a c
+	d4 d8( e) g4 e8( g) g e d4
+	d8\upbow( e) d c a4 a8( d)
+	d a c b a[ g16( a)] c8 c
+	e, g a c a16( g e g) d4 e8 e d4
+	d'8\downbow e d e d c d4
+	g,8.\downbow a16 g8 a d, e g4
+	d'8.\downbow e16 d8 e g e d4
+	g,8.\downbow a16 g8 a d, e g4
+	d'8\downbow e d c \partial 4 d4
+	g,8.\downbow a16 d,8 e \partial 4 g4
+	\repeat unfold 2 { d'8\downbow e d4 g,8\downbow a g4}
+	\repeat unfold 2 { d'8\downbow r g,\upbow r }
+	d'8 d g, d' g, d' g, d'
+	\repeat unfold 2 { g, r g r }
+	g g g g r g\upbow[ g\downbow] r
+	d'8\downbow d c c d d a4
+	a8\upbow( d) c c e, g a4
+	c8\upbow( a) a c d d d e
+	g g e g g e d4 d8\upbow( e) d c
+	a4 a8\upbow( d) d a c b a[ g16( a)] c8 c
+	e, g a c a16( g e g) d4 e'8 e d r \fine
+}
+\layout { }
+% \midi { }
+}
+\end{lilypond}
+
+\vfill\break

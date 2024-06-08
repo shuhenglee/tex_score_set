@@ -1,0 +1,64 @@
+%%% 2024年 2月 7日 星期三 12时05分59秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\tocdata{toc}{巴赫}
+\addsection{萨拉班德舞曲}{古典}
+\submtitle{选自\tllangle 第六大提琴组曲\trrangle}
+\vskip-7pt plus 0pt minus 2pt
+\composer{{J. S. \youyuan 巴赫}}
+\begin{lilypond}
+\include "conf.ly"
+\score {
+\relative {%
+	\tempo "Largo"
+	\key d \major
+	\time 3/2
+%	\textLengthOn
+	fis''2\downbow\p\< fis2.( g4)\! e( cis)
+	d2.( b'4) a( fis) g2.( a4)
+	g( fis) g( e) fis2
+	fis\upbow\< gis2.( a4)\! d,( cis)
+	d2.( e4) d( cis) cis( b) b( d) d( cis) cis1\mark\default
+	fis2\p\< fis2.( g4)\!
+	e( cis) d2.( b'4) a( fis) g2.( a4)
+	g( fis) g( e) fis2 fis\< gis2.( a4)\!
+	d,( cis) d2.( e4) d( cis) cis( b) b( d)
+	d( cis) cis1\mark\default
+	e2\p e2.--( e4-.) e( cis) dis2.( e4)
+	fis( a,) b( fis'8 g) a2~( a4 fis) g2.--(  g4-.)
+	g( fis) c'2. g,4( fis) e'( d c') b2
+	d,4( e) e( fis) fis( g) g2 g2.--( b4-.)
+	b( g) g( e) e( cis) cis( a) a( g) g( a')
+	a( fis) fis( d) d( b) b( g) g( fis) e( g')
+	g1.\< g~\!( g4 g-.) g( fis) fis( gis)
+	gis( a) a2.--\>( a4-.)\mark\default
+	a4\!\p( fis) fis( d) d( cis)
+	a'( cis,) cis2.--( d4-.)
+	a'( f) f( d) d( cis) cis( d8 e)
+	e2.( d4) d( e8 fis16 g) g4( fis) fis( e)
+	e( fis) fis( e) e( d) d2~( d4 b) cis2
+	cis4( d) d1\mark\default
+	e2\p e2.--( e4-.) e( cis) dis2.( e4)
+	fis( a,) b( fis'8 g) a2~( a4 fis) g2.--( g4-.)
+	g( fis) c'2. g,4( fis) e'( d c') b2
+	d,4( e) e( fis) fis( g) g2 g2.--( b4-.)
+	b( g) g( e) e( cis) cis( a) a( g) g( a')
+	a( fis) fis( d) d( b) b( g) g( fis) e( g')
+	g1.\< g~\!( g4 g-.) g( fis) fis( gis)
+	gis( a) a2.--\>( a4-.)\!\mark\default
+	a\p( fis) fis( d) d( cis) a'( cis,) cis2.--( d4-.)
+	a'( f) f( d) d( cis) cis( d8 e) e2.( d4)
+	d( e8 fis16 g) g4( fis) fis( e)
+	e( fis) fis( e) e( d)
+	d2~( d4 b) cis2 cis4( d) d1 \fine
+}
+\layout{
+\context{
+	\Score
+	\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/8)
+}}
+% \midi { }
+}
+\end{lilypond}
+
+\vfill\break

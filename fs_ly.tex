@@ -1,0 +1,39 @@
+%%% 2023年 2月 2日 星期四 11时55分41秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\hbox{}\vskip0pt plus 1fil
+
+\tocdata{toc}{荒木丰久}
+\addsection{四季歌}{古典}
+
+~\hfill{\youyuan 荒木丰久}
+
+\begin{lilypond}
+\layout {
+	indent = #0
+	line-width = #164
+ 	\context {%
+ 		\Score
+ 		\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 16)
+ 	}
+}
+\score{
+\relative {%
+	\set Score.barNumberVisibility = #all-bar-numbers-visible
+	%\override Score.BarNumber.break-visibility = #all-visible
+	\override Score.BarNumber.break-visibility = #end-of-line-invisible
+	\tempo "Moderato"
+	\key c \major
+	\time 4/4
+	e''4 e8 d c d c b a4 a a2
+	f'4 f8 e d c d f e1
+	f4 f8 e d4 d8 f e4 e8 c a4 c
+	b e d8 c b c a1
+	f'4 f8 e d4 d8 f e4 e8 d a4 c
+	b e d8 c b c a1 \bar "|."
+}%
+\layout { }
+%\midi { }
+}
+\end{lilypond}
+\vskip0pt plus 1fil

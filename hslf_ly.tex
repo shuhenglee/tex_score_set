@@ -1,0 +1,38 @@
+%%% 2024年 1月24日 星期三 11时18分17秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\hbox{}\vfill %it is invalid to use \noindent
+
+%\tocdata{toc}{C.Saint-Sa\"ens}
+\addsection{红沙拉帆}{民歌}
+%\seclangtit{The Swan}
+\composer{{\youyuan 俄罗斯民歌}}
+\begin{lilypond}
+\include "conf.ly"
+\score {
+\relative {%
+	\tempo "Moderato"
+	\key g \major
+	\time 2/4
+	\repeat volta 2 {
+		d'8_\markup{\italic{\teeny{2da volta 8va.}}}\downbow
+		( b') b( a) g( fis16 e) d8( e16 fis)
+		g8( b) c( b) a4 e
+		e8( c') c( b) b( a) g( e) d( g) a( b) g4 r}
+	g8\downbow g( fis e) d'4 c fis,8-- fis-- b8.( a16) a4 g
+	b8 b( a g) g4 fis b,8-- b-- g'8.( fis16) e4 r
+	a8\downbow a( b a) g4( d8) d a' a( b a) g4 r
+	a8\downbow( c) b( a) a( g) g( fis) b,( g') g( fis) e4 r
+	b''8\upbow( c) b a g8( b16 g) fis8 e b'( c) b a g4 r
+	a8\downbow a( b c) e( d) c( a) d, d( b' a) g4 r
+	d,8\downbow( b') b( a) g8( fis16 e) d8( e16 fis)
+	g8( b) c( b) a4 e
+	e8( c') c( b) b( a) g( fis)
+	d( g) a( b) g2 \fine
+}
+\layout { }
+% \midi { }
+}
+\end{lilypond}
+
+\vfill\break

@@ -1,0 +1,60 @@
+%%% 2023年 2月25日 星期六 13时23分46秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+%%% FIXME Ugly! I don't know how call a macro of TeX in Lilypond,
+%%% or define a macro by the code of lilypond.
+% \def\book@edtion#1{%
+% 	\lilypond[fragment,inline,staffsize=10]{
+% 		\new Staff \with {
+% 			\override Clef.color = "SlateBlue"}
+% 		\relative {
+% 			\override Staff.StaffSymbol.color = "FireBrick"
+% 			\override NoteHead.color = "blue"
+% 			\override Beam.color = "deepskyblue"
+% 			\override Stem.color = "green"
+% 			"#1"}}}%
+
+\def\book@ed{%
+	\lilypond[fragment,inline,staffsize=10]{
+		\new Staff \with {
+			\override Clef.color = "SlateBlue"}
+		\relative {
+			\override Staff.StaffSymbol.color = "FireBrick"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			e'4. c8 [ f]}}}
+\def\book@edd{%
+	\lilypond[fragment,inline,staffsize=10]{
+		\new Staff \with {
+			\override Clef.color = "SlateBlue"}
+		\relative {
+			\override Staff.StaffSymbol.color = "FireBrick"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			e'4. c8 [ f c]}}}%
+\def\book@eddd{%
+	\lilypond[fragment,inline,staffsize=10]{
+		\new Staff \with {
+			\override Clef.color = "SlateBlue"}
+		\relative {
+			\override Staff.StaffSymbol.color = "FireBrick"
+			\override NoteHead.color = "blue"
+			\override Beam.color = "deepskyblue"
+			\override Stem.color = "green"
+			e'4. c8 [ f c g']}}}%
+
+\def\printbookver{%
+\begin{tabu}{|[1pt]c|c|[1pt]}
+	\tabucline[1pt]{1-2}
+	Date & Edition \\\tabucline[1pt]{1-2}
+	2023-02-03 & \book@ed\\\hline
+	2023-02-03 & \book@edd\\\hline
+	2023-12-21 & \book@eddd\\\tabucline[1pt]{1-2}
+\end{tabu}
+}
+%%% XXX modify:
+\let\booked=\book@eddd
+\def\bookver{v3.6-$\beta$}
+%\input{edition.tex}

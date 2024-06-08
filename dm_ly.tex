@@ -1,0 +1,41 @@
+%%% 2023年 4月26日 星期三 09时07分42秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\leavevmode\vfil
+\tocdata{toc}{R.~Schumann}
+\addsection{梦幻曲}{古典}
+\seclangtit{Dreaming}
+\composer{{\youyuan 舒曼}}
+\composer{R.~Schumann}
+\begin{lilypond}
+	\include "conf.ly"
+\score {
+\relative {
+	\key f \major
+	\tempo "Andante espressivo"
+	\time 4/4
+	\partial 4 c'4\upbow\p
+	f2 ~f8 e\<( f a c f) f2\! e8( d
+	c f) g,( a bes d) f,\>( g a c) g2\! c,4\upbow
+	f2 ~f8 e\<( f a c a') a4.\! g8( f e)
+	f( a d, f) e4.( ees8\>)
+	d4_\markup{\small\italic{rit.}} e! c\! r8 c,8\upbow\p
+	f2_\markup{\small\italic{a tempo}} ~f8 e\<( f a c f)
+	f2\! e8( d c f) g,( a bes d) f,\>( g a c) g2\! c,4\upbow
+	f2 ~f8 e\<( f a c a') a4.\! g8( f e) f( a d, f) e4.( ees8\>)
+	d4_\markup{\small{\italic{rit.}}} e! c\! r8 c,8\upbow\p
+	f2_\markup{\small\italic{a tempo}} ~f8 e\<( f a c ees) ees2\!
+	d8( c) bes( d g, a) bes4.( a8) g4.( d8) d4 r8 f8\upbow
+	bes2\mf ~bes8 a( bes d f bes) bes2 a8( g)
+	f( a d, e) f4.( e8) d4.( a8) a4_\markup{\small\italic{rit.}}( g8-- c,--)
+	f2_\markup{\small\italic{a tempo}} ~f8 e( f a c f) f2
+	e8( d c f) g,( a bes d) f,( g a c) g2 c,4\pp\upbow
+	f2 ~f8 e\<( f a c a') a4.\!\fermata g8_\markup{\small\italic{rit.}}\>( f d)\!
+	c( f) g,( a bes d) g,( a bes d) d,( e) f2\fermata \fine
+}
+\layout { }
+%\midi {\set Staff.midiInstrument = "violin" }}
+%\midi {}
+}
+\end{lilypond}
+\vfil\eject

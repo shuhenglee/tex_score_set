@@ -1,0 +1,602 @@
+%%% 2023年 2月21日 星期二 13时14分19秒 CST
+%%% author: 李小丹(Shao-Dan Lee) 字 殊恒(Shuheng)
+
+\def\turncenter#1#2{%
+	\setbox100=\hbox{#1}
+	\hskip-\wd100#1#2}
+\def\udarrowc{%
+	\turncenter{{\textcolor{VioletRed}\faArrowsAltV}}{C}}
+
+\pagemark{附录}{}
+\leavevmode\vskip0pt plus 1fil%
+\moveleft12pt\vbox{\tabmajorminor}\label{tab:tab1}\vskip0pt plus 1fil\break
+\section{大调与自然小调}
+每章\footnote{每章开头都放一个循环圈不是因为它重要，
+而是由于我用tikz结合lilypond花了几个小时、改了四五个版本才画出这个圈圈，
+所以得多用它几次。}
+开头部分都有一个五度循环圈。
+我们在这里再稍微对各个大调和自然小调展开描述一下，
+展现出各个调式一个八度内的音名、音级和升降号，及其对应关系。
+详见下列三张表(第一、二张表我把他俩合并在一起，太大了，
+放在上一页(\autopageref{tab:tab1})了。\\
+\begin{center}
+	\begin{tabu} to 0.5\hsize {|[2pt]X[1.5,c]|X[1.5,c]|X[4,l]|[2pt]}
+	\tabucline[2pt]{1-3}
+	大~~调 & 自然小调 & 升降号\\\tabucline[1pt]{1-3}
+	C\sharp & a\sharp & F\sharp~C\sharp~G\sharp~D\sharp~A\sharp~E\sharp~B\sharp\\\hline
+	F\sharp & d\sharp & F\sharp~C\sharp~G\sharp~D\sharp~A\sharp~E\sharp\\\hline
+	B & g\sharp & F\sharp~C\sharp~G\sharp~D\sharp~A\sharp\\\hline
+	E & c\sharp & F\sharp~C\sharp~G\sharp~D\sharp\\\hline
+	A & f\sharp & F\sharp~C\sharp~G\sharp\\\hline
+	D & b & F\sharp~C\sharp\\\hline
+	G & e & F\sharp\\\hline
+	\udarrowc & a & \\\hline
+	F & d & B\flat\\\hline
+	B\flat & g & B\flat~E\flat\\\hline
+	E\flat & c & B\flat~E\flat~A\flat\\\hline
+	A\flat & f & B\flat~E\flat~A\flat~D\flat\\\hline
+	D\flat & b\flat & B\flat~E\flat~A\flat~D\flat~G\flat\\\hline
+	G\flat & e\flat & B\flat~E\flat~A\flat~D\flat~G\flat~C\flat\\\hline
+	C\flat & a\flat & B\flat~E\flat~A\flat~D\flat~G\flat~C\flat~F\flat\\\tabucline[2pt]{1-3}
+\end{tabu}
+\end{center}
+
+%%% cf. Understanding Basic Music Theory
+%%% cf. A Handbook of Musical Knowledge
+%%% cf. musicca
+%%% cf. https://www.8notes.com/glossary/
+%%% cf. manual of lilypond
+\section{音乐术语表}
+\seclangtit{Italian Musical Terms}
+在五线谱中经常会出现意大利文和拉丁文。
+不太常见的会被忘记，我在这里列出几张音乐
+常用术语、词汇表，并给出中英文翻译（对某些简单英文，
+我就不加中文翻译了）。
+%%% FIXME
+%%% If I use longtabu by the way that is described in manual multirow,
+%%% the TeX say: "! Dimension too large".
+%%% but manual multirow section 3.6 say: 
+%%% "It is possible to use \multirow in a longtable..."
+\begin{center}
+	\begin{tabu} to \hsize {|[2pt]X[2,c]|X[4,c]|X[2,c]|[2pt]}
+	\tabucline[2pt]{1-3}
+		\multicolumn{3}{|[2pt]c|[2pt]}{\tbhcolor{Tempo}}\\\tabucline[1pt]{1-3}
+		Larghissimo & very very slow & 受不了的慢\\\hline
+		Grave & very slow and solemn & 贼慢、庄重\\\hline
+		Largo & slow, broad & 慢、广板\\\hline
+		Lento & slow & 慢\\\hline
+		Larghetto & not quite as slow as largo & 没有largo慢\\\hline
+		Adagio & slow, leisurely & 慢、轻松\\\hline
+		Adagietto & rather leisurely, faster than adagio & 稍慢，比adagio快\\\hline
+		Andante & a medium slow & 中等的慢\\\hline
+		\multirow{2}{*}{Andantino} & moderate pace, but not & 中等的慢，\\
+		& so slow as andante & 但没有andante慢\\\hline
+		Andante moderato & faster than andante  & 比andante快\\\hline
+	\end{tabu}
+\end{center}
+
+\begin{center}
+	\begin{tabu} to \hsize {|[2pt]X[2,c]|X[4,c]|X[2,c]|[2pt]}
+		\hline
+		Moderato & moderate, or medium & 中等速度\\\hline
+		Allegretto & not as fast as allegro & 没有allegro快\\\hline
+		Allegro moderato &  slightly slower than allegro & 比allegro慢一点\\\hline
+		Allegro & fast & 快\\\hline
+		Vivo, & \multirow{2}{*}{lively, brisk} & \multirow{2}{*}{生动, 轻快}\\
+		Vivace & & \\\hline
+		Allegrissimo & faster than allegro & 比allegro快\\\hline
+		Vivacissimo & faster than vivo & 比vivo快\\\hline
+		Presto & very fast & 贼快\\\hline
+		Prestissimo & very, very fast & 贼快, 贼快的\\
+		\tabucline[2pt]{1-3}
+		\multicolumn{3}{|[2pt]c|[2pt]}{\tbhcolor{与tempo相关的其他词汇}}\\\tabucline[1pt]{1-3}
+		Largamente & broadly, massively & 很慢\\\hline
+		Tempo ordinario & ordinary speed & 一般速度\\\hline
+		Tempo commodo & convenient, comfortable speed & 适当的速度\\\hline
+		Tosto & quick, rapid & 快\\\hline
+		Celere & quick, nimble & 快\\\hline
+		Veloce & Swiftly & 飞快\\\hline
+		Doppio Tempo, & \multirow{2}{*}{twice as fast as the preceding movement} & \multirow{2}{*}{双倍速}\\
+		Doppio Movimento & &\\\hline
+		\multirow{2}{*}{L'istesso tempo} & in the same time as & \multirow{2}{*}{同速}\\
+		& the preceding movement &\\\hline
+		Pi\`u lento & more slowly & 更慢\\
+	\tabucline[2pt]{1-3}
+		\multicolumn{3}{|[2pt]c|[2pt]}{\tbhcolor{Gradual Tempo Changes}}\\\tabucline[1pt]{1-3}
+		Ritardando(rit.) & slowing down & 慢下来\\\hline
+		Rallentando(rall.) & gradually slower & 渐慢\\\hline
+		Allargando(allarg.) & a slow rallentando that retains a full & 保持饱满的渐慢\\\hline
+		Ritenuto(riten.) & immediately slower, retained & 慢\\\hline
+		\multirow{2}{*}{rubato} & Robbed time, the slight alterations & 弹性速度，\\
+		& by acceleration or retardation & 可以稍稍加/减速度\\\hline
+		Stringendo(string.), & \multirow{3}{*}{hurrying the speed} & \multirow{3}{*}{加快}\\
+		Stretto, & & \\
+		Affrettando & & \\\hline
+		Accelerando(accel.) & accelerating, getting faster & 渐快\\\hline
+		poco a poco & little by little & 逐渐地\\\hline
+		Tempo I, & \multirow{2}{*}{back to the original tempo} & \multirow{2}{*}{返回最初的速度}\\
+		Tempo Primo & & \\\hline
+		A tempo & resume previous tempo & 保持之前的速度\\\hline
+		Ad libitum(ad lib.), & \multirow{2}{*}{At the performer's pleasure} & \multirow{2}{*}{根据演奏者意愿}\\
+		A piacere & & \\\hline
+		Meno mosso & Slower at once & 突慢\\\hline
+		Pi\`u mosso & Faster at once & 突快\\
+	\tabucline[2pt]{1-3}
+		\multicolumn{3}{|[2pt]c|[2pt]}{\tbhcolor{Dynamics}}\\\tabucline[1pt]{1-3}
+		\lilyDynamics{ppp}(pianississimo) & very, very soft & 非常、非常的弱\\\hline
+	\end{tabu}
+\end{center}
+
+\begin{center}
+	\begin{tabu} to \hsize {|[2pt]X[2,c]|X[4,c]|X[2,c]|[2pt]}
+	\hline
+		\lilyDynamics{pp}(pianissimo) & very soft & 非常的弱\\\hline
+		\lilyDynamics{p}(piano) & soft & 弱\\\hline
+		\lilyDynamics{mp}(mezzo piano) & medium soft & 中弱\\\hline
+		\lilyDynamics{mf}(mezzo forte) & medium load & 中强\\\hline
+		\lilyDynamics{f}(forte) & load & 强\\\hline
+		\lilyDynamics{ff}(fortissimo) & very load & 非常强\\\hline
+		\lilyDynamics{fff}(fortississimo) & very, very load & 非常、非常强\\
+	\tabucline[2pt]{1-3}
+		\multicolumn{3}{|[2pt]c|[2pt]}{\tbhcolor{Gradual Dynamics}}\\\tabucline[1pt]{1-3}
+		Crescendo(cresc.) & \multirow{2}{*}{gradually louder} & \multirow{2}{*}{渐强}\\
+		\crescHairpin & &\\\hline
+		Diminuendo(dim.) & \multirow{2}{*}{gradually softer} & \multirow{2}{*}{渐弱}\\
+		\decrescHairpin & & \\\hline
+		\lilyDynamics{fp}(fortepiano) & loud, then immediately soft & 强，立即转弱\\\hline
+		\lilyDynamics{sfz}(sforzando), & \multirow{3}{*}{suddenly accented} & \multirow{3}{*}{突强}\\
+		\lilyDynamics{sf}(forzando), & &\\
+		\lilyDynamics{fz}(szforzato) & &\\\hline
+		\lilyDynamics{rfz}(rinforzando), & \multirow{2}{*}{reinforced} & \multirow{2}{*}{增强}\\
+		\lilyDynamics{rf} & &\\\hline
+		Mancando & Failing or waning & 减弱\\\hline
+		Smorzando & \multirow{2}{*}{Dying away} & \multirow{2}{*}{减弱消失}\\
+		Morendo & &\\\hline
+		Perdendosi & Losing itself by getting softer and slower & 变慢变弱直至消失\\
+	\tabucline[2pt]{1-3}
+		\multicolumn{3}{|[2pt]c|[2pt]}{\tbhcolor{Performing Articulations}}\\\tabucline[1pt]{1-3}
+		Arco & with bow & 弓奏\\\hline
+		Arpeggio(arp.) & chord notes played in succession & 琶音\\\hline
+		Bartok pizz(\thesnap),  & \multirow{2}{*}{pluck upwards} & \multirow{2}{*}{上拨弦}\\
+		Snap pizzicato & &\\\hline
+		Cadenza & ornamental passage & 装饰奏\\\hline
+		Flageolet(\theflageolet) & overtone, whistling sound & 泛音\\\hline
+		\multirow{2}{*}{Fermata(\thefermata)} & to be lengthened by & \multirow{2}{*}{延音}\\
+		& an unspecified amount &\\\hline
+		\multirow{2}{*}{Glissando(gliss.)} & a continuous slide from & \multirow{2}{*}{滑奏}\\
+		& one note to another &\\\hline
+		\multirow{2}{*}{Harmonic(\theharmonic)} & overtone, & 泛音\\
+		& characterized by harmony & 和声\\\hline
+		\multirow{2}{*}{Legato} & notes played with a smooth & \multirow{2}{*}{联奏}\\
+		& connection between them & \\\hline
+		Mano destra(m.d.) & right hand & 右手\\\hline
+		Mano sinistra(m.s.) & left hand & 左手\\\hline
+		\multirow{2}{*}{Pizzicato(pizz.)} & plucked with the finger& \multirow{2}{*}{拨弦}\\
+		& rather than bowed &\\\hline
+		Marcato(Marc.) & marked, accented & 重音\\\hline
+	\end{tabu}
+\end{center}
+
+\begin{center}
+	\begin{tabu} to \hsize {|[2pt]X[2,c]|X[4,c]|X[2,c]|[2pt]}
+	\hline
+		\multirow{2}{*}{Mordent} & a rapid alternation of a note with & \multirow{2}{*}{波音}\\
+		& the note immediately below or above &\\\hline
+		Portamento(port.) & a smooth slide from one note to another & 滑音\\\hline
+		Tutti & performed by the entire ensemble & 合奏\\\hline
+		Staccato(stacc.) & shortened and sharply separated notes & 断奏\\\hline
+		Staccatissimo & shortened and extremely & \multirow{2}{*}{顿奏}\\
+		(staccatiss.) & separated notes & \\\hline
+		Solo & unaccompanied & 独奏\\\hline
+		Stopped(\thestopped) & plucked with the left hand finger & 左手拨弦\\\hline
+		Sul A(G, D, or E) & on the A string of a violin & 在A弦上\\\hline
+		Sul ponticello & near the bridge (violin) & 靠近琴码\\\hline
+		\multirow{2}{*}{Vibrato(vib.)} & a rapid repeated slight change & \multirow{2}{*}{颤音，揉弦}\\
+		& in the pitch of a note &\\\hline
+	\tabucline[2pt]{1-3}
+		\multicolumn{3}{|[2pt]c|[2pt]}{\tbhcolor{Moods}}\\\tabucline[1pt]{1-3}
+		Affetto & with affection & 充满爱意\\\hline
+		Affettuoso & with tender feeling & 慈爱\\\hline
+		Agitato & agitated & 焦急的\\\hline
+		Amabile & amiably & 亲切友好的\\\hline
+		Amoroso & lovingly & 深情的\\\hline
+		Animato & animated, lively & 愉快的\\\hline
+		Appassionato & impassioned & 热情的\\\hline
+		Ardito & with spirit and boldness & 大胆勇敢\\\hline
+		Arioso & a short melody & 短小的旋律\\\hline
+		Attacca & go on immediately & 继续、无停顿\\\hline
+		Burlesco & comic & 滑稽的\\\hline
+		Cantabile, Cantando & in a singing style & 如歌地\\\hline
+		Capriccioso & in a free, impulsive & 荒诞的\\\hline
+		Con amore & with love & 充满爱的\\\hline
+		Con anima & with soul & 满含热情\\\hline
+		Con brio & with spirit, with vigor & 充满活力\\\hline
+		Con delicatezza & with delicacy & 优雅精致\\\hline
+		Con dolore, & \multirow{2}{*}{with grief} & \multirow{2}{*}{悲痛欲绝的}\\
+		Con duolo & & \\\hline
+		Con espressione & with expression & 情感流露\\\hline
+		Con energia & with energy or force & 充满力量\\\hline
+		Con fuoco & with fiery manner & 充满激情\\\hline
+		Con grazia & with grace & 优雅\\\hline
+		Con moto & with movement & 生动的\\\hline
+		Con sordini & with mutes & 微弱的\\\hline
+		Con spirito & with spirit & 充满活力\\\hline
+		Con tenerezza, & \multirow{2}{*}{with tenderness} & \multirow{2}{*}{温柔的}\\
+		Teneramente & & \\\hline
+		Con vivacita & with vivacity & 活泼的\\\hline
+	\end{tabu}
+\end{center}
+
+\begin{center}
+	\begin{tabu} to \hsize {|[2pt]X[2,c]|X[4,c]|X[2,c]|[2pt]}
+	\hline
+		Deciso & decided & 坚定的\\\hline
+		Delicato & Delicately & 精致的\\\hline
+		Dolce & sweet & 甜蜜的\\\hline
+		Doloroso, & \multirow{2}{*}{sorrowful} & \multirow{2}{*}{悲哀的}\\
+		Dolente & & \\\hline
+		Energico & energetic & 有力的\\\hline
+		Espressivo(espr.) & expressive & 富有变现力的\\\hline
+		Feroce & fiercely & 强烈的\\\hline
+		Forza & force & 有力的\\\hline
+		Furioso & impetuously & 激烈的\\\hline
+		Giusto & right, exact, strict & 严格的，明确的\\\hline
+		Giocoso & jocosely & 幽默的\\\hline
+		Giojoso & joyous & 欢乐的\\\hline
+		Grandioso & grandly & 宏大的\\\hline
+		Grazioso & graceful & 优雅的\\\hline
+		Gustoso & tastefully & 高雅的\\\hline
+		Impetuoso & impetuously & 激烈的\\\hline
+		Lagrimoso & tearfully & 悲伤的\\\hline
+		Languido & languid & 无精打采的\\\hline
+		Legato & smoothly and connectedly &  平稳连贯的\\\hline
+		Leggieramente & getting gradually lighter & 变得轻快\\\hline
+		Leggiero(legg.) & light, nimble & 轻快的\\\hline
+		Maestoso & majestic & 庄严的\\\hline
+		Marcato & marked, accented & 显著的\\\hline
+		Martellato & with great force & 强有力的\\\hline
+		Mesto & sad & 忧伤的\\\hline
+		Mosso & moved, fast and with animation & 欢快热烈\\\hline
+		Pesante & heavily & 沉重的\\\hline
+		Piacevole & in a pleasing manner & 令人愉快的\\\hline
+		Pomposo & pompously & 浮夸的\\\hline
+		Risoluto & decisive, strong & 果断的，坚定的\\\hline
+		Scherzando, & \multirow{2}{*}{playful, joking, jest} & \multirow{2}{*}{滑稽的}\\
+		Scherzoso & &\\\hline
+		Semplice & simply & 单纯的\\\hline
+		Serioso & seriously & 严肃的\\\hline
+		Sonore & sonorous & 浑厚的，洪亮的\\\hline
+		Strepitoso & boisterous manner & 喧闹的\\\hline
+		Sostenuto & sustained & 持续的\\\hline
+		Sotto voce & in an undertone & 轻声低语\\\hline
+		Tenuto & held, sustained & 持续\\\hline
+		Tranquillo & calm & 平静的\\\hline
+		Vigoroso & vigorously & 剧烈的\\\hline
+		Volante & in a light & 轻快\\\hline
+	\tabucline[1pt]{1-3}
+	\end{tabu}
+\end{center}
+
+\begin{center}
+	\begin{tabu} to \hsize {|[2pt]X[2,c]|X[4,c]|X[2,c]|[2pt]}
+	\tabucline[1pt]{1-3}
+		\multicolumn{3}{|[2pt]c|[2pt]}{\tbhcolor{Repeats}}\\\tabucline[1pt]{1-3}
+		Fine & the end of a piece & 曲终\\\hline
+		\lilyGlyph[scale=1.4,raise=0.5]{scripts.coda}\footnote{%
+			第二个coda乐段可用 \lilyGlyph[scale=1.4,raise=0.5]{scripts.coda}\ \lilyGlyph[scale=1.4,raise=0.5]{scripts.coda}
+				表示，第三个可用\thecoda3\thecoda,$\ldots$} (Coda)  &
+			the concluding passage of a piece & 乐段终\\\hline
+		\lilyGlyph[scale=1.1,raise=0.5]{scripts.segno}\footnote{%
+			第二个segno乐段可用 \lilyGlyph[scale=1.1,raise=0.5]{scripts.segno}\ \lilyGlyph[scale=1.1,raise=0.5]{scripts.segno}
+				表示，第三个可用\thesegno3\thesegno,$\ldots$} (Segno) &
+			the beginning or end of a repeat & 反复段的开始或结束\\\hline
+		Da Capo(D.C.)\footnote{A repeat instruction to be performed more than once includes `$\ldots$V.', \eg\ D.C.~2V.}
+			& repeat from the beginning & 反复从开始处开始\\\hline
+		Da Capo al Fine & \multirow{2}{*}{repeat from the beginning to the `Fine'} & \multirow{2}{*}{反复从开始处到`Fine'}\\
+		(D.C. al Fine) & &\\\hline
+		Da Capo al Coda & repeat from the beginning to \lilyGlyph[scale=1.4,raise=0.5]{scripts.coda}, then &
+				反复从开始处到 \lilyGlyph[scale=1.4,raise=0.5]{scripts.coda}，然后\\
+		(D.C. al Coda) & skip to the concluding Coda passage & 直接跳到coda乐段尾\\\hline
+		Da Capo al Segno & \multirow{2}{*}{repeat from the beginning to \lilyGlyph[scale=1.1,raise=0.5]{scripts.segno}} &
+				\multirow{2}{*}{反复从开始处到 \lilyGlyph[scale=1.1,raise=0.5]{scripts.segno}\ 结束}\\
+		(D.C. al Segno) & &\\\hline
+		Dal Segno(D.S.) & repeat from \lilyGlyph[scale=1.1,raise=0.5]{scripts.segno} &
+			反复从 \lilyGlyph[scale=1.1,raise=0.5]{scripts.segno}\ 开始\\\hline
+		Dal Segno al Fine & \multirow{2}{*}{repeat from \lilyGlyph[scale=1.1,raise=0.5]{scripts.segno} to the `Fine'} &
+				\multirow{2}{*}{反复从 \lilyGlyph[scale=1.1,raise=0.5]{scripts.segno}\ 到`Fine'}\\
+		(D.S. al Fine) & & \\\hline
+		Dal Segno al Coda & repeat from the \lilyGlyph[scale=1.1,raise=0.5]{scripts.segno}
+					to the \lilyGlyph[scale=1.4,raise=0.5]{scripts.coda}, then &
+				反复从 \lilyGlyph[scale=1.1,raise=0.5]{scripts.segno}\ 到 \lilyGlyph[scale=1.4,raise=0.5]{scripts.coda}\ 然后\\
+		(D.S. al Coda) & skip to the concluding Coda passage & 直接跳到coda乐段尾\\\hline
+		Bis & twice & 两遍\\\hline
+		Volta\footnote{1ma volta (1st time), 2da volta (2nd time), $\ldots$} & time & 次、遍\\
+	\tabucline[2pt]{1-3}
+		\multicolumn{3}{|[2pt]c|[2pt]}{\tbhcolor{Vocal Ranges}}\\\tabucline[1pt]{1-3}
+		soprano & a high woman's voice & 女高音\\\hline
+		\multirow{3}{*}{coloratura soprano} & This is not really a different & \multirow{3}{*}{花腔女高音}\\
+		& range from the soprano but &\\
+		& but high, light, and agile &\\\hline
+		mezzo-soprano & in between soprano and alto & 女中音\\\hline
+		alto & a low woman's voice & 女低音 \\\hline
+		contralto & same as alto & 女低音 \\\hline
+		contraltoff & lower than alto & 女低音\\\hline
+		tenor & a high man's voice & 男高音 \\\hline
+		countertenor & tensor but high, light, and agile & 男高音\\\hline
+		baritone & in between tenor and bass & 男中音\\\hline
+		bass & a low man's voice & 男低音\\\hline
+	\tabucline[2pt]{1-3}
+		\multicolumn{3}{|[2pt]c|[2pt]}{\tbhcolor{Instrumental Ranges}}\\\tabucline[1pt]{1-3}
+		contra-$\ldots$ & lower & 低音$\ldots$\\\hline
+		piccolo-$\ldots$ & higher & 高音$\ldots$\\\hline
+		a note name-$\ldots$ & instrument in different ranges & 某调$\ldots$\\
+	\tabucline[2pt]{1-3}
+		\multicolumn{3}{|[2pt]c|[2pt]}{\tbhcolor{Styles}}\\\tabucline[1pt]{1-3}
+		Alla Cappella & unaccompanied church music & 无伴奏教堂音乐\\\hline
+		Barcarolle & a boat-song & 船歌\\\hline
+		Marcia & a march & 进行曲\\\hline
+	\end{tabu}
+\end{center}
+
+\begin{center}
+	\begin{tabu} to \hsize {|[2pt]X[2,c]|X[4,c]|X[2,c]|[2pt]}
+	\hline
+		Minuetto, & \multirow{2}{*}{a minuet} & \multirow{2}{*}{小步舞曲}\\
+		Menuetto & & \\\hline
+		Parlando,& \multirow{2}{*}{a ballade} & \multirow{2}{*}{叙事曲}\\
+		Parlante & &\\\hline
+		Pastorale & pastoral style & 田园曲\\\hline
+		Scherzo & a playful piece & 幽默曲\\\hline
+		Sonata & sonata & 奏鸣曲\\\hline
+		Trio & three parts, instruments or voices & 三重\\\hline
+		Variazione & variations & 变奏曲\\\hline
+	\tabucline[2pt]{1-3}
+		\multicolumn{3}{|[2pt]c|[2pt]}{\tbhcolor{其他有用词汇}}\\\tabucline[1pt]{1-3}
+		a & at, for, with, to, by, in & \\\hline
+		al, all', alla & in the style of, to the & 以, 到\\\hline
+		ancora & again & 再一次\\\hline
+		assai & very much & 非常\\\hline
+		bene, ben & well & \\\hline
+		bravura & florid & 华丽的\\\hline
+		cantilena & A song-like melody & 如歌的旋律\\\hline
+		chiaro & clear & 清晰\\\hline
+		col, colla & with the &\\\hline
+		col arco & with the bow & \\\hline
+		colla parte, & The accompanist to keep closely with & 伴奏紧跟独奏\\
+		colla voce & the solo part, or voice & 或歌唱\\\hline
+		con & with, together & 用、以$\ldots$\\\hline
+		come & like, as & 如\\\hline
+		da & from & 从\\\hline
+		dal & from the & 从\\\hline
+		di & of the & \\\hline
+		divisi & divided & 分\\\hline
+		dopo & after & 之后\\\hline
+		e poi & and then & \\\hline
+		ed & and &\\\hline
+		fuoco & fiery & 热烈的\\\hline
+		la, il, lo & the &\\\hline
+		ma & but & 但\\\hline
+		ma non tanto & but not so much & 没那么多\\\hline
+		ma non troppo & but not too much & 别太多\\\hline
+		maggiore & major key & 大调\\\hline
+		meno & less & 更少\\\hline
+		mezzo & half & 一半，中间\\\hline
+		minore & minor key & 小调\\\hline
+		molto, di molto & a lot & 非常\\\hline
+		nei, nel, nell', & \multirow{2}{*}{in the} &\\
+		nella, nelle, nello & &\\\hline
+	\end{tabu}
+\end{center}
+
+\begin{center}
+	\begin{tabu} to \hsize {|[2pt]X[2,c]|X[4,c]|X[2,c]|[2pt]}
+	\hline
+		non & not & 不\\\hline
+		nuovo & again & 再一次\\\hline
+		O & or & 或\\\hline
+		obbligato(obb.) & an instrumental part, indispensable & 伴奏、不可省略\\\hline
+		ostinato & continually repeated & 不断反复\\\hline
+		pi\`u & more & 更多\\\hline
+		poi & then &\\\hline
+		pochettino & very little & 很少\\\hline
+		prima & at first & 开始\\\hline
+		quasi & almost & 几乎\\\hline
+		questo & this & \\\hline
+		(un) poco & a little & 一点儿\\\hline
+		poco a poco & little by little & 一点一点地\\\hline
+		Repetizone, & \multirow{2}{*}{repeat} & \multirow{2}{*}{反复}\\
+		replica & &\\\hline
+		sciolto & free & 自由\\\hline
+		segue & follows & 跟随\\\hline
+		sempre & always & 总是\\\hline
+		sentimento & sentiment & 情绪\\\hline
+		senza & without & 不用\\\hline
+		si replica & to be repeated & 反复\\\hline
+		sin', sino & until & 直到\\\hline
+		simile & in a similar way & 相似方式\\\hline
+		sopra & above & 上面\\\hline
+		sordino, & \multirow{2}{*}{a mute} & \multirow{2}{*}{弱音}\\
+		sordini & & \\\hline
+		spianato & without pathos & 平稳\\\hline
+		subito & suddenly, quickly & 突然\\\hline
+		sul', sull', sulla & on the &\\\hline
+		tacet & be silent & 沉默\\\hline
+		tanto & as much & 那样多\\\hline
+		tedesca & in a German manner & 德式\\\hline
+		tema & a theme & 主题\\\hline
+		tempo di$\ldots$ & in the time of $\ldots$ & 以$\ldots$速度\\\hline
+		troppo & too much & 太多\\\hline
+		un, una & a, an, one & \\\hline
+		volti subito(V.S) & turn page quickly & 翻页\\\hline
+		voce & voice & 歌唱\\\hline
+		8va & an octave higher & 高八度\\
+	\tabucline[2pt]{1-3}
+	\end{tabu}
+\end{center}
+
+\section{词汇缩写}
+\seclangtit{Abbreviations}
+
+\begin{center}
+	\begin{tabu} to \hsize {|[2pt]X[1,c]|X[3,c]|X[3,c]|[2pt]}
+	\tabucline[2pt]{1-3}
+		\multicolumn{3}{|[2pt]c|[2pt]}{\tbhcolor{Abbreviations for Instruments}}\\\tabucline[2pt]{1-3}
+		\textbf{Abbr.} & \textbf{English} & \textbf{Italian}\\
+		\tabucline[1.5pt]{1-3}
+		acc. & Accordion & Fisarmonica \\\hline
+		afl. & Alto flute & Flauto contralto \\\hline
+		alt. & Alto (voice) (contralto) & Contralto \\\hline
+		arp.  & Arpeggione & Arpeggione \\\hline
+		bag. & Bagpipe & Cornamusa (Zampogna) \\\hline
+		bar. & Baritone (voice) & Baritono \\\hline
+		bass. & Bass (voice) & Basso \\\hline
+		bbar. & Bass baritone (voice) & Basso-baritono \\\hline
+		bc. & Continuo (Basso continuo) & Basso continuo \\\hline
+		bcl. & Bass clarinet  & Clarinetto basso \\\hline
+		bell. & Bell (Chimes) & Campane \\\hline
+		bfl. & Bass flute & Flauto basso \\\hline
+		bgtr. & Bass guitar & Basso eletrrico \\\hline
+		bjo. &  Banjo  & Banjo \\\hline
+		bn. & Bassoon & Fagoto \\\hline
+		bob. & Bass oboe (Baritone oboe) & Oboe baritono \\\hline
+		br. & Brass instruments  & Strumento a fiato di ottone \\\hline
+		bryt. & Baryton & Baritono \\\hline
+		bstcl. & Basset clarinet & Clarinetto di bassetto \\\hline
+		bsthn. & Basset horn & Corno di bassetto \\\hline
+		bug. & Bugle & Corna de segnale \\\hline
+		cbcl. & Contrabass clarinet & Clarinetto contrabbasso \\\hline
+		cbn. & Contrabassoon & Contrafagotto \\\hline
+		cch. & Children's chorus & Coro di fanciulli \\\hline
+		cel. & Celesta & Celesta \\\hline
+		ch. & Mixed chorus & Coro miste \\\hline
+		cimb. & Cimbalom & Cimbalom \\\hline
+		cit. & Cittern & Cetra (Cetara) \\\hline
+		cl. & Clarinet & Clarinetto \\\hline
+		clvd. & Clavichord & Clavicordo \\\hline
+		cm. & Chalumeau & Salmo\`e \\\hline
+		conc. & Concertina & Concertina \\\hline
+		crh. & Crumhorn & Cromorno \\\hline
+		crt. & Cornet & Cornetta (a pistoni) \\\hline
+		crtt. & Cornett (Zink) & Cornetto \\\hline
+		ct. & Counter-Tenor & Controtenore \\\hline
+		cv. & Child's voice & Voce di fanciullo \\\hline
+		db. & Double Bass & Contrabasso \\\hline
+		dlcn. & Dulcian & Dulciana \\\hline
+		dom. & Domra & Domra \\\hline
+		dulc. & Dulcimer & Salterio \\\hline
+	\end{tabu}
+\end{center}
+
+\begin{center}
+	\begin{tabu} to \hsize {|[2pt]X[1,c]|X[3,c]|X[3,c]|[2pt]}
+	\hline
+		egtr. & Electric guitar & Chitarra elettrica \\\hline
+		eh. & English horn (Cor anglais) & Corno inglese \\\hline
+		elec. & Electronic Instruments & Strumento elettrica \\\hline
+		epf. & Electric piano  & Pianoforte elettrico \\\hline
+		eq. & Equal voices & Voci pari \\\hline
+		erhu. & Erhu & Erhu \\\hline
+		euph. & Euphonium & Eufonio \\\hline
+		fch. & Female chorus & Coro femminile \\\hline
+		fda. &  Flute d'amore (Tenor flute) & Flauto tenor \\\hline
+		fgh. & Flugelhorn  & Flicorno soprano \\\hline
+		fife. & Fife & Fiffaro \\\hline
+		fl. & Flute & Flauto \\\hline
+		flag. & Flageolet & Flagioletto \\\hline
+		ghca. & Glass harmonica (Bowl organ) & Glassarmonica (Bicchieri de vetro) \\\hline
+		gl. & Glockenspiel & Campanelli (Metallofono) \\\hline
+		gtr. & Guitar & Chitarra \\\hline
+		harm. & Harmonium & Armonium \\\hline
+		hca. & Harmonica (Mouth Organ) & Armonica a bocco \\\hline
+		heck. & Heckelphone & Heckelfono \\\hline
+		hn. &  Horn (French horn) & Corno \\\hline
+		hp. & Harp & Arpa \\\hline
+		hpd. & Harpsichord & Cembalo (Clavicembalo) \\\hline
+		kbd. & Keyboard instrument & Strumento a tastiera \\\hline
+		lute. & Lute & Liuto \\\hline
+		lyre. & Lyre & Lira \\\hline
+		mand. & Mandolin & Mandolino \\\hline
+		mar. & Marimba & Marimba \\\hline
+		mch. & Male chorus & Coro maschile \\\hline
+		mez. & Mezzo-soprano & Mezzosoprano \\\hline
+		mus. & Musette & Musette de cour \\\hline
+		nar. & Narrator (Reciter) & Narratore \\\hline
+		ob. & Oboe & Oboe \\\hline
+		oca. & Ocarina & Ocarina \\\hline
+		oda. & Oboe d'amore & Oboe d'amore \\\hline
+		om. & Ondes Martenot & Onde Martenot \\\hline
+		oph. & Ophicleide & Ophicleide \\\hline
+		orch. & Orchestra & Orchestra \\\hline
+		org. & Organ & Organo \\\hline
+		oud. & Oud & Oud \\\hline
+		pan. & Pan flute (Pan-pipes) & Flauto di Pan (Siringa) \\\hline
+		perc. & Percussion & Strumento a percussione \\\hline
+		pf. & Piano & Pianoforte \\\hline
+		pfte. & Piano & Pianoforte \\\hline
+		pf3h. & Piano 3 hands  & Pianoforte 3 mani \\\hline
+	\end{tabu}
+\end{center}
+
+\begin{center}
+	\begin{tabu} to \hsize {|[2pt]X[1,c]|X[3,c]|X[3,c]|[2pt]}
+	\hline
+		pf4h. & Piano 4 hands & Pianoforte 4 mani \\\hline
+		pf5h. & Piano 5 hands & Pianoforte 5 mani \\\hline
+		pf6h. & Piano 6 hands & Pianoforte 6 mani \\\hline
+		pflh. & Piano left hand & Piano di sinistra \\\hline
+		pfped. & Pedal piano & Pianoforte organistico \\\hline
+		pfrh. & Piano right hand  & Piano di destra \\\hline
+		picc. & Piccolo & Flauto piccolo (Ottavino) \\\hline
+		pipa. & Pipa  & Pipa \\\hline
+		pk. & Timpani & Timpani \\\hline
+		ptpt. & Piccolo trumpet  & Trombino \\\hline
+		reb. & Rebec & Rebeca (Ribeca) \\\hline
+		rec. & Recorder & Flauto dolce (Flauto a becco) \\\hline
+		sar. & Sarrusophone & Sarrusofono \\\hline
+		sax. & Saxophone & Sassofono (Saxofono) \\\hline
+		sheng. & Sheng & Sheng \\\hline
+		shw. & Shawm & Ciaramella (Piffaro) \\\hline
+		sit. & Sitar & Sitar \\\hline
+		skbt. & Sackbut & Sackbut \\\hline
+		sop. & Soprano (voice) & Soprano \\\hline
+		srp. & Serpent & Serpentone \\\hline
+		stpt. & Slide trumpet & Tromba a tirarsi \\\hline
+		str. & String instruments & Archi \\\hline
+		sxh. & Saxhorn & Flicorni \\\hline
+		syn. & Synthesizer & Sintetizzatore \\\hline
+		tba. & Tuba & Tuba \\\hline
+		tbn. & Trombone & Trombone \\\hline
+		ten. & Tenor & Tenore \\\hline
+		thrm. & Theremin & Theremin \\\hline
+		timp. & Timpani & Timpani \\\hline
+		tpt. & Trumpet & Tromba (Clarino) \\\hline
+		uch. & Unison chorus & Coro unisono \\\hline
+		uke. & Ukelele (Ukulele) & Ukelele \\\hline
+		v. & Voice (solo) & Voce \\\hline
+		va. & Viola & Viola \\\hline
+		vap. & Viola pomposa & Viola pomposa \\\hline
+		vc. & Cello & Violoncello \\\hline
+		vda. & Viola d'amore & Viola d'amore \\\hline
+		vib. & Vibraphone & Vibrafono \\\hline
+		vie. & Vielle (Hurdy-Gurdy) & Lyra tedesca (Ghironda) \\\hline
+		viol. & Viol (Viola da gamba) & Gamba (Viola da gamba) \\\hline
+		vlne. & Violone & Violone \\\hline
+		vn. & Violin & Violino \\\hline
+		vuv. & Vuvuzela & Vuvuzela \\\hline
+		vv. & Voices (multiple soloists) & Voci \\\hline
+	\end{tabu}
+\end{center}
+
+\begin{center}
+	\begin{tabu} to \hsize {|[2pt]X[1,c]|X[3,c]|X[3,c]|[2pt]}
+	\hline
+		wag. & Wagner tuba & Tuba di Wagner \\\hline
+		ww. & Woodwind instruments & Strumento a fiato di legno \\\hline
+		xiao. & Xiao & Xiao \\\hline
+		xyl. & Xylophone & Xilofono (Silofono) \\\hline
+		zith. & Zither & Cetra da tavola \\\hline
+	\tabucline[2pt]{1-3}
+	\end{tabu}
+\end{center}
+
+
