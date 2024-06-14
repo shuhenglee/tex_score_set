@@ -1,0 +1,52 @@
+%%% 2024年 6月14日 星期五 10时23分01秒 CST
+%%% author: Shao-Dan Lee 李小丹 字 殊恒
+
+\hbox{}\vfill
+\tocdata{toc}{瓦格纳}
+\addsection{婚礼进行曲}{古典}
+%\submtitle{瓦格纳\tllangle 罗恩格林\trrangle 选曲}
+\submtitle{瓦格纳歌剧选曲}
+\composer{{\youyuan 阿布罗西奥改编}}
+
+\begin{lilypond}
+\include "conf.ly"
+\score {
+\relative {%
+	\key bes \major 
+	\tempo "Moderato"
+	\time 2/4
+	f'4\mf\downbow bes8.\upbow( bes16--) bes4. r8
+	f4\downbow c'8.( a16--) bes4. r8
+	f4\downbow\< bes8.( ees16--)\! ees4 d8.( c16-.)
+	bes4 \acciaccatura {c16 bes} a8.( bes16-.) c4. r8
+	f,4\downbow bes8.( bes16-.) bes4. r8
+	f4\downbow c'8.( a16-.) bes4. r8
+	f4 bes8.( d16-.) f4 d8.( bes16-.) g4 c8.( d16) bes4. r8
+	ees4\downbow\mf d8( c) g4-> g-> a bes8.( c16-.) c4. r8
+	ees4\downbow\pp d8 c g4-> g->  g a8.( b16) b2
+	d4\downbow e8( d) c4( b) d8( cis c b) b4( a)
+	d4\< e8 fis\! g4( b,) b\>( a8. g16) e'4( d)\!
+	d\p\< d8 ees!\! f4.\> d8\!
+	f( e) ees!( c) d2
+	d4 d8 e f4.\dim ees!8 d4\p d16( cis b cis) d4. f,8
+	f4\mf\downbow bes8.\upbow( bes16--) bes4. r8
+	f4\downbow c'8.( a16--) bes4. r8
+	f4\downbow\< bes8.( ees16--)\!
+	ees4 d8.( c16-.) bes4 \acciaccatura {c16 bes} a8.( bes16-.) c4. r8
+	f,4\downbow bes8.( bes16-.) bes4. r8
+	f4\downbow c'8.( a16-.) bes4. r8
+	f4\downbow\< bes8.( d16-.) f4 d8.( bes16-.)\! g'2\f
+	f8 ees d8.( c16) bes4.\< bes8\upbow d4 f\! bes4\ff r4
+	bes,,4.\downbow\ff bes8\upbow bes2\downbow ~ bes8 r8 r4 \fine
+}
+\layout{
+\context{
+	\Score
+	\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/64)
+}
+}
+% \midi { }
+}
+\end{lilypond}
+
+\vfill\break
