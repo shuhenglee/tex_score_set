@@ -1,5 +1,5 @@
 # tex_score_set
-[The latex source of the book "Music Score Collection".][ss]
+[The LaTeX source of the book "Music Score Collection".][ss]
 
 Dependencies:
 - TeX Live
